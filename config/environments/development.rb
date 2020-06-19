@@ -4,6 +4,12 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+ 
+ config.action_mailer.raise_delivery_errors = true
+ config.action_mailer.delivery_method = :test
+ host = '336e017dd6bd4456a1e97e9a649459f8.vfs.cloud9.ap-northeast-1.amazonaws.com/' 
+ config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+ 
   config.cache_classes = false
 
   # Do not eager load code on boot.
@@ -51,4 +57,6 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  
+  
 end
