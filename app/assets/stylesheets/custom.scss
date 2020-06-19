@@ -14,7 +14,7 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 200px;
 }
 
 section {
@@ -107,6 +107,12 @@ footer {
   margin-right:110px;
 }
 
+/*home*/
+.title{
+  font-size:55px;
+  font-family:'IM Fell DW Pica SC', serif;
+  
+}
 /* miscellaneous */
 
 .debug_dump {
@@ -231,4 +237,16 @@ input {
 }
 .hotel_spacing{
   margin-top:50px;
+}
+span{
+  color:white;
+}
+.contact-font{
+  color:black;
+  font-size:20px;
+}
+.K5{
+  background-image:url("K5 back.jpg");
+  background-size: cover;
+  opacity:1;
 }
