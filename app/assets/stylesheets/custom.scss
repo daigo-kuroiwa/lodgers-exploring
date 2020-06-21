@@ -103,9 +103,7 @@ footer {
   }
 }
 
-.world{
-  margin-right:110px;
-}
+
 
 /*home*/
 .title{
@@ -113,6 +111,29 @@ footer {
   font-family:'Londrina Shadow', cursive;
   
 }
+
+.world_logo{
+  margin-right:110px;
+}
+
+.world_logo:active{
+	 box-shadow:none;
+	 position:relative;
+	 top:7px;
+}
+
+.hostel_logo:active{
+	 box-shadow:none;
+	 position:relative;
+	 top:7px;
+}
+
+.hotel_logo:active{
+	 box-shadow:none;
+	 position:relative;
+	 top:7px;
+}
+
 /* miscellaneous */
 
 .debug_dump {
@@ -215,8 +236,12 @@ input {
 }
 
 /*hostel page*/
+.top_name{
+  font-size:35px;
+}
 .area_name{
   font-size:35px;
+  margin-top:40px;
 }
 .hotel_name{
   font-size:20px;
@@ -238,15 +263,7 @@ input {
 .hotel_spacing{
   margin-top:50px;
 }
-span{
-  color:white;
-}
 .contact-font{
   color:black;
   font-size:20px;
-}
-.K5{
-  background-image:url("K5 back.jpg");
-  background-size: cover;
-  opacity:1;
 }
