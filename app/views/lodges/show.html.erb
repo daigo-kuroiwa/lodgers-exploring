@@ -1,0 +1,15 @@
+<% provide(:title, @lodge.lodge) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+<ul class="hotel_info">
+    <h1><li><%= @lodge.lodge%></li></h1>
+    
+    <li><%= @lodge.postal_code %></li>
+    <li><%= @lodge.prefecture %><%= @lodge.address %></li>
+    <li><%= @lodge.phone_number %></li>
+    <li></li>
+</ul>
+    </section>
+  </aside>
+</div>

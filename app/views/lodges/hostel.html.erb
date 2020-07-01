@@ -1,0 +1,23 @@
+<% provide(:title, "Hostel") %>
+
+<!--  検索拡張機能  -->
+<% if logged_in? %>
+<p>都道府県検索</p>
+  <%= form_tag(lodges_hostel_path, :method => 'get' ) do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag 'Search', :name => nil %>
+<% end %>
+  <% end %>
+  
+<h1>Hostel</h1>
+
+<% @lodges.each do |lodge| %>
+  <p class="hotel_name"><%= link_to lodge.lodge, lodge.hp_link %></p>
+  <%= image_tag lodge.image.to_s %>　<%= image_tag lodge.image2.to_s %>　<%= image_tag lodge.image3.to_s %>
+  <ul class=hotel_info>
+  <li><%= lodge.postal_code %></li>
+  <li><%= lodge.prefecture %><%= lodge.address %></li>
+  <li><%= lodge.phone_number %></li>
+  <li><%= lodge.roomtype %></li>
+  </ul>
+<% end %>

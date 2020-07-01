@@ -11,12 +11,4 @@ class StaticPagesController < ApplicationController
   def contact
   end
   
-  def hostel
-  end
-  
-  def hotel
-  end
-  
-  def world
-  end
 end
