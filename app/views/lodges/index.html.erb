@@ -1,19 +1,1 @@
 <% provide(:title, "Hostel") %>
-<h1>Hostel</h1>
-
-<p class="top_name">北海道</p>
-
-<div class="hotel_spacing">
-    <p class="hotel_name"><%=link_to @lodges.lodge, @lodges.hp_link %></p> 
-     <div class="image_list">
-    <%=link_to image_tag("NUPKA.main.jpg", alt:"NUPKA_image", class:"hostel_image")%>
-    <%=link_to image_tag("NUPKA.dorm.png", alt:"NUPKA_image", class:"hostel_image")%>
-    <%=link_to image_tag("NUPKA.room.png", alt:"NUPKA_image", class:"hostel_image")%>
-    </div>
-</div>
-<ul class="hotel_info">
-    <li><%= @lodges.postal_code %></li>
-    <li><%= @lodges.prefecture %><%= @lodges.address %></li>
-    <li><%= @lodges.phone_number %></li>
-    <li><%= @lodges.roomtype %></li>
-</ul>

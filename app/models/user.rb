@@ -8,6 +8,10 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  has_many :likes, dependent: :destroy
+  has_many :lodges, through: :likes
+  
+  
     
     # 渡された文字列のハッシュ値を返す
   def User.digest(string)
@@ -56,6 +60,7 @@ class User < ApplicationRecord
   end
   
   private
+
 
    
 end

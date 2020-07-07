@@ -3,13 +3,11 @@ class UsersController < ApplicationController
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
    
-   def index
-     @users = User.paginate(page: params[:page])
-   end
-
    
-  def show
-    @user = User.find(params[:id])
+  def index
+     @user = User.find(params[:id])
+    #特定のユーザーが登録したお気に入りを全て取得する
+     @likes = Like.where("user_id = ?", @user)
   end
   
   def new
