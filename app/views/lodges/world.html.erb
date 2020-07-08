@@ -42,7 +42,7 @@
   <p class="hotel_name"><%= link_to lodge.lodge, lodge.hp_link %></p>
   <ul class=hotel_info>
   <li><%= lodge.postal_code %></li>
-  <li><%= lodge.prefecture %><%= lodge.address %></li>
+  <li><%= lodge.prefecture %><%= lodge.address %><button class="icon_form"><i class="fas fa-map-marker-alt"></i><%= link_to "Google map", lodge.map, class: 'map_image' %></button></li>
   <li><%= lodge.phone_number %></li>
   <li><%= lodge.roomtype %></li>
   </ul>

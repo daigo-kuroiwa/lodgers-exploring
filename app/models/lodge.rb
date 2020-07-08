@@ -9,9 +9,9 @@ class Lodge < ApplicationRecord
   
   def self.search(search)  #ここでのself.はLodge.を意味する
     if search
-      where(['lodge LIKE ? OR prefecture LIKE ? OR address LIKE ?', "%#{search}%","%#{search}%","%#{search}%"]) #検索とprefectureの部分一致を表示。#Lodge.は省略
-    else 
-      all #全て表示。#Lodge.は省略
+      Lodge.where(['lodge LIKE ? OR prefecture LIKE ? OR address LIKE ?', "%#{search}%","%#{search}%","%#{search}%"]).uniq#検索とprefectureの部分一致を表示。#Lodge.は省略
+    else
+      Lodge.all
     end
   end
   

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200705235858) do
+ActiveRecord::Schema.define(version: 20200708052353) do
 
   create_table "likes", force: :cascade do |t|
     t.integer  "user_id",    null: false
@@ -30,11 +30,12 @@ ActiveRecord::Schema.define(version: 20200705235858) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "type"
-    t.string   "hp_link"
     t.string   "roomtype"
+    t.string   "hp_link"
     t.string   "image"
     t.string   "image2"
     t.string   "image3"
+    t.string   "map"
   end
 
   create_table "users", force: :cascade do |t|

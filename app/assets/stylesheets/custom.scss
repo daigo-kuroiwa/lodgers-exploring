@@ -252,7 +252,7 @@ input {
   font-family: "Cormorant Garamond", serif;
 }
 .top_name:hover{
-  color: #008080;  
+  color: #978029;  
 }
 .buttons-coll {
   width: 90%;
@@ -355,7 +355,8 @@ input {
 .hotel_info{
   list-style: none;
   margin-top:20px;
-  floar:left
+  floar:left;
+  font-weight: 550;
 }
 .hotel_spacing{
   margin-top:50px;
@@ -411,7 +412,29 @@ color:#FFFF99;
   margin-top:75px;
 }
 
-.btn{
-  padding-left:0px;
-  padding-right:0px;
+.map_image{
+  padding-left:10px;
+  color:white;
+  
+}
+.map_image:hover {
+  font-weight: bold;
+  color: black;
+  
+}
+.icon_form{
+  margin-left: 35px;
+  font-size: 10px;
+  display: inline-block;
+  width: auto;
+  padding: 8px 15px 8px 15px;
+  font-family: "Lato","游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-weight: bold;
+  background-color:#978029;
+  letter-spacing: 0.1em;
+  text-decoration: none !important;
+  text-align: center;
+  color:white;
+  border: 0px solid #978029;
+  transition: all 0.2s ease;
 }

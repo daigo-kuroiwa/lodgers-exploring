@@ -12,7 +12,7 @@
 <div class="search_condition">
   <p>エリア別検索</p>
   <%= form_tag(lodges_hotel_path, :method => 'get' , class:'form4') do %>
-  <%= text_field_tag :search, '',class:'sbox4', placeholder:'都道府県を入力　ex.青森県' %>
+  <%= text_field_tag :search, '',class:'sbox4', placeholder:'都道府県を入力　ex.青森' %>
   <button class="sbtn4" type="submit"><i class="fas fa-search"></i></button></div>
   <% end %>
   
@@ -43,7 +43,7 @@
   <%= image_tag lodge.image.to_s %>　<%= image_tag lodge.image2.to_s %>　<%= image_tag lodge.image3.to_s %>
   <ul class=hotel_info>
   <li><%= lodge.postal_code %></li>
-  <li><%= lodge.prefecture %><%= lodge.address %></li>
+  <li><%= lodge.prefecture %><%= lodge.address %><button class="icon_form"><i class="fas fa-map-marker-alt"></i><%= link_to "Google map", lodge.map, class: 'map_image' %></button></li>
   <li><%= lodge.phone_number %></li>
   <li><%= lodge.roomtype %></li>
   </ul>
