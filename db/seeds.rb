@@ -398,3 +398,53 @@ Lodge.create!(lodge:  "なり -nuttari NARI-",
              image2:File.open("./app/assets/images/nari.lobby.png"),
              image3:File.open("./app/assets/images/nari.room.png")
              )
+             
+Lodge.create!(lodge:  "川崎キングスカイフロント東急REIホテル",
+             prefecture: "神奈川県",
+             postal_code: "〒210-0821",
+             address: "川崎市川崎区殿町3-25-11",
+             phone_number: "TEL 044-280-1090",
+             type: "hotel",
+             hp_link: "https://www.tokyuhotels.co.jp/kawasaki-r/",
+             roomtype: "Roomtype: Superior Queen, Superior Double, Premium Double, Superior Large Twin, Superior Twin, Twin",
+             image:File.open("./app/assets/images/REI.main.jpg"),
+             image2:File.open("./app/assets/images/REI.lobby.jpg"),
+             image3:File.open("./app/assets/images/REI.room.jpg")
+             )
+Lodge.create!(lodge:  "里山のオーベルジュ 薪の音",
+             prefecture: "富山県",
+             postal_code: "〒939-1844",
+             address: "南砺市野口140",
+             phone_number: "TEL 0763-62-3255",
+             type: "hotel",
+             hp_link: "https://makinooto.co.jp/",
+             roomtype: "Roomtype: Junior Suite, Deluxe Japanese Modern, Deluxe Twin",
+             image:File.open("./app/assets/images/薪の音.main.jpg"),
+             image2:File.open("./app/assets/images/薪の音.lobby.jpg"),
+             image3:File.open("./app/assets/images/薪の音.room.png")
+             )
+Lodge.create!(lodge:  "off Hostel in Kanazawa",
+             prefecture: "石川県",
+             postal_code: "〒920-0852",
+             address: "金沢市此花町4-19",
+             phone_number: "TEL 090-1392-8309",
+             type: "hostel",
+             hp_link: "https://offkanazawa.com/",
+             roomtype: "Roomtype: Deluxe Family, Family, Twin",
+             image:File.open("./app/assets/images/off.main.jpg"),
+             image2:File.open("./app/assets/images/off.lobby.jpg"),
+             image3:File.open("./app/assets/images/off.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "ゲストハウス白",
+             prefecture: "石川県",
+             postal_code: "〒920-0852",
+             address: "金沢市此花町4-19",
+             phone_number: "TEL 090-1392-8309",
+             type: "hostel",
+             hp_link: "https://guesthouse-shiro.com/",
+             roomtype: "Roomtype: Japanese Modern, Double",
+             image:File.open("./app/assets/images/白.main.png"),
+             image2:File.open("./app/assets/images/白.lobby.png"),
+             image3:File.open("./app/assets/images/白.room.png")
+             )
