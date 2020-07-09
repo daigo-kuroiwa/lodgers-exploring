@@ -1,10 +1,4 @@
 # coding: utf-8
-
-User.create!(name: "example user",
-             email: "example@gmail.com",
-             password_digest: "example0000",
-             remember_digest: "example0000"
-            )
             
              
 Lodge.create!(lodge:  "HOTEL NUPKA",
@@ -163,7 +157,7 @@ Lodge.create!(lodge:  "THE BOLY OSAKA",
              image3:File.open("./app/assets/images/BOLY.room.jpg")
              )
              
-Lodge.create!(lodge:  "HOTEL TRIM(女性専用ホテル)",
+Lodge.create!(lodge:  "HOTEL TRIM (女性専用)",
              prefecture: "石川県",
              postal_code: "〒920-0852",
              address: "金沢市此花町9-18",
@@ -539,3 +533,366 @@ Lodge.create!(lodge:  "1166バックパッカーズ",
              image3:File.open("./app/assets/images/1166.room.jpg")
              )
              
+Lodge.create!(lodge:  "Name came Ono",
+             prefecture: "福井県",
+             postal_code: "〒912-0061",
+             address: "大野市篠座町7-2",
+             phone_number: "TEL 090-5220-5800",
+             map: "https://g.page/namakemono?share",
+             type: "hostel",
+             hp_link: "https://www.namecameono.com/",
+             roomtype: "Roomtype: Male dormitory, Female dormitory, Economy Triple, Economy Twin",
+             image:File.open("./app/assets/images/ono.main.jpg"),
+             image2:File.open("./app/assets/images/ono.lobby.jpg"),
+             image3:File.open("./app/assets/images/ono.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "ゲストハウスIRAGO",
+             prefecture: "愛知県",
+             postal_code: "〒441-3502",
+             address: "田原市赤羽根町寺山",
+             phone_number: "TEL 090-5220-5800",
+             map: "https://goo.gl/maps/tQJke4FAbi7F9pnq9",
+             type: "hostel",
+             hp_link: "http://www.guesthouse-irago.com/index.html",
+             roomtype: "Roomtype: Single room",
+             image:File.open("./app/assets/images/IRAGO.main.jpg"),
+             image2:File.open("./app/assets/images/IRAGO.lobby.jpg"),
+             image3:File.open("./app/assets/images/IRAGO.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "里山十帖",
+             prefecture: "新潟県",
+             postal_code: "〒949-6361",
+             address: "南魚沼市大沢1209-6",
+             phone_number: "TEL 025-783-6777",
+             map: "https://goo.gl/maps/JSfi6THeETNdTrWn8",
+             type: "hotel",
+             hp_link: "http://www.satoyama-jujo.com/",
+             roomtype: "Roomtype: Family, Suite Twin",
+             image:File.open("./app/assets/images/里山.main.jpg"),
+             image2:File.open("./app/assets/images/里山.lobby.jpg"),
+             image3:File.open("./app/assets/images/里山.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "箱根本箱",
+             prefecture: "神奈川県",
+             postal_code: "〒250-0408",
+             address: "足柄下郡箱根町強羅1320-491",
+             phone_number: "TEL 0460-83-8025",
+             map: "https://goo.gl/maps/WwCwAZiafNBmZWGV7",
+             type: "hotel",
+             hp_link: "http://hakonehonbako.com/",
+             roomtype: "Roomtype: Family, Suite Twin",
+             image:File.open("./app/assets/images/本箱.main.jpg"),
+             image2:File.open("./app/assets/images/本箱.lobby.jpg"),
+             image3:File.open("./app/assets/images/本箱.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "松本本箱",
+             prefecture: "長野県",
+             postal_code: "〒390-0303",
+             address: "松本市浅間温泉3-13-1",
+             phone_number: "TEL 025-783-6777",
+             map: "https://goo.gl/maps/XMp8mZQdJ225XLMR7",
+             type: "hotel",
+             hp_link: "https://matsumotojujo.com/",
+             roomtype: "Roomtype: Family, Suite Twin",
+             image:File.open("./app/assets/images/松本.main.jpg"),
+             image2:File.open("./app/assets/images/松本.lobby.jpg"),
+             image3:File.open("./app/assets/images/松本.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "サンキューヒポポタマスホステル",
+             prefecture: "長野県",
+             postal_code: "〒390-0875",
+             address: "松本市城西2-5-18",
+             phone_number: "TEL 070-1560-2223",
+             map: "https://goo.gl/maps/pZDo56A1XRScXB6f7",
+             type: "hostel",
+             hp_link: "https://thankyouhippo.com/",
+             roomtype: "Roomtype: Mix dormitory, Family, Triple, Small Twin",
+             image:File.open("./app/assets/images/ヒポポ.main.jpg"),
+             image2:File.open("./app/assets/images/ヒポポ.lobby.jpg"),
+             image3:File.open("./app/assets/images/ヒポポ.room.jpg")
+             )
+
+Lodge.create!(lodge:  "tabi-shiro GUESTHOUSE & LOUNGE",
+             prefecture: "長野県",
+             postal_code: "〒390-0875",
+             address: "松本市城西城西1-3-6",
+             phone_number: "TEL 0263-88-3453",
+             map: "https://goo.gl/maps/618qSBiiRKboiVSH6",
+             type: "hostel",
+             hp_link: "https://tabi-shiro.com/",
+             roomtype: "Roomtype: Mix dormitory, Female dormitory, Japanese Modern",
+             image:File.open("./app/assets/images/tabi.main.jpg"),
+             image2:File.open("./app/assets/images/tabi.lobby.jpg"),
+             image3:File.open("./app/assets/images/tabi.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "温泉の宿 ゲストハウス雷鳥",
+             prefecture: "長野県",
+             postal_code: "〒390-1520",
+             address: "松本市安曇4306",
+             phone_number: "TEL 0263-93-2746",
+             map: "https://goo.gl/maps/i1SUMq7wxMJCBANn7",
+             type: "hostel",
+             hp_link: "https://ghraicho.com/",
+             roomtype: "Roomtype: Japanese Modern Economy, Family, Twin",
+             image:File.open("./app/assets/images/雷鳥.main.jpg"),
+             image2:File.open("./app/assets/images/雷鳥.lobby.jpg"),
+             image3:File.open("./app/assets/images/雷鳥.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "ミンカハウス",
+             prefecture: "長野県",
+             postal_code: "〒399-0000",
+             address: "松本市深志3-1-7",
+             phone_number: "TEL ",
+             map: "https://goo.gl/maps/UCPdt5BjKxnbL6Us9",
+             type: "hostel",
+             hp_link: "https://matsumotominkahous.wixsite.com/minkahouse",
+             roomtype: "Roomtype: Mix dormitory, Mix Single dormitory, Deluxe Queen, Economy Triple",
+             image:File.open("./app/assets/images/ミンカ.main.jpg"),
+             image2:File.open("./app/assets/images/ミンカ.lobby.jpg"),
+             image3:File.open("./app/assets/images/ミンカ.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "古白",
+             prefecture: "奈良県",
+             postal_code: "〒630-8335",
+             address: "奈良市鳴川町10",
+             phone_number: "TEL 0742-81-4236",
+             map: "https://goo.gl/maps/k8bJuMpxSvN2Mu5T9",
+             type: "hostel",
+             hp_link: "http://nara-kohaku.com/",
+             roomtype: "Roomtype: Mix dormitory, Female dormitory, Japanese Modern",
+             image:File.open("./app/assets/images/古白.main.jpg"),
+             image2:File.open("./app/assets/images/古白.lobby.jpg"),
+             image3:File.open("./app/assets/images/古白.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "Guest House縁",
+             prefecture: "奈良県",
+             postal_code: "〒630-8335",
+             address: "奈良市鳴川町10",
+             phone_number: "TEL ",
+             map: "https://goo.gl/maps/5ybCmkZibFt5iAkA7",
+             type: "hostel",
+             hp_link: "https://hotel.travel.rakuten.co.jp/hinfo/?f_no=168237",
+             roomtype: "Roomtype: Small Double, Small Twin, Triple, Economy room for 4 people",
+             image:File.open("./app/assets/images/EN.main.jpg"),
+             image2:File.open("./app/assets/images/EN.lobby.jpg"),
+             image3:File.open("./app/assets/images/EN.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "ゲストハウス枕",
+             prefecture: "奈良県",
+             postal_code: "〒630-8374",
+             address: "奈良市今御門町27-1",
+             phone_number: "TEL 0742-24-2279",
+             map: "https://goo.gl/maps/oSdUVVsXBab3jpvY9",
+             type: "hostel",
+             hp_link: "http://www.guesthouse-makura.com/",
+             roomtype: "Roomtype: Mix Dormitory, Twin",
+             image:File.open("./app/assets/images/枕.main.jpg"),
+             image2:File.open("./app/assets/images/枕.lobby.jpg"),
+             image3:File.open("./app/assets/images/枕.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "潤 hotobil (女性専用)",
+             prefecture: "奈良県",
+             postal_code: "〒630-8142",
+             address: "奈良市肘塚町181-15",
+             phone_number: "TEL 0742-37-3278",
+             map: "https://goo.gl/maps/B7T5emoqiYEe5kPp8",
+             type: "hostel",
+             hp_link: "http://hotobil.com/",
+             roomtype: "Roomtype: Japanese Modern, Western Style",
+             image:File.open("./app/assets/images/潤.main.jpg"),
+             image2:File.open("./app/assets/images/潤.lobby.jpg"),
+             image3:File.open("./app/assets/images/潤.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "奈良ゲストハウス神奈寐",
+             prefecture: "奈良県",
+             postal_code: "〒630-8306",
+             address: "奈良市紀寺町1054",
+             phone_number: "TEL 0742-77-2765",
+             map: "https://goo.gl/maps/TXtp49GdrEtXcPz58",
+             type: "hostel",
+             hp_link: "http://www.kamunabi.net/",
+             roomtype: "Roomtype: Male dormitory, Female dormitory, Twin, Japanese Modern",
+             image:File.open("./app/assets/images/神奈寐.main.jpg"),
+             image2:File.open("./app/assets/images/神奈寐.lobby.jpg"),
+             image3:File.open("./app/assets/images/神奈寐.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "ELEVEN VILLAGE 吹屋",
+             prefecture: "岡山県",
+             postal_code: "〒719-2341",
+             address: "高梁市成羽町吹屋836",
+             phone_number: "TEL 050-5435-0665",
+             map: "https://g.page/elevenvillage?share",
+             type: "hostel",
+             hp_link: "https://www.elevenvillage.org/",
+             roomtype: "Roomtype: Twin",
+             image:File.open("./app/assets/images/ELEVEN.main.png"),
+             image2:File.open("./app/assets/images/ELEVEN.lobby.png"),
+             image3:File.open("./app/assets/images/ELEVEN.room.png")
+             )
+             
+Lodge.create!(lodge:  "とりいくぐる GUESTHOUSE & LOUNGE",
+             prefecture: "岡山県",
+             postal_code: "〒700-0026",
+             address: "岡山市北区奉還町4-7-15",
+             phone_number: "TEL 086-250-2629",
+             map: "https://goo.gl/maps/1X36Hh9z794xpnf46",
+             type: "hostel",
+             hp_link: "http://toriikuguru.com/",
+             roomtype: "Roomtype: Economy Twin, Japanese Modern",
+             image:File.open("./app/assets/images/とりい.main.jpg"),
+             image2:File.open("./app/assets/images/とりい.lobby.jpg"),
+             image3:File.open("./app/assets/images/とりい.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "瀬戸内隠れ家リゾートCiera",
+             prefecture: "広島県",
+             postal_code: "〒722-0061",
+             address: "尾道市百島町2586-22",
+             phone_number: "TEL 0848-38-2007",
+             map: "https://g.page/setouchi-ciela?share",
+             type: "hotel",
+             hp_link: "https://ciela.jp/",
+             roomtype: "Roomtype: Isolated House",
+             image:File.open("./app/assets/images/ciera.main.png"),
+             image2:File.open("./app/assets/images/ciera.lobby.png"),
+             image3:File.open("./app/assets/images/ciera.room.png")
+             )
+             
+Lodge.create!(lodge:  "ONOMICHI U2 HOTEL CYCLE",
+             prefecture: "広島県",
+             postal_code: "〒722-0037",
+             address: "尾道市西御所町5-11",
+             phone_number: "TEL 0848-21-0550",
+             map: "https://goo.gl/maps/qLyupLpBkVBN6KK19",
+             type: "hotel",
+             hp_link: "https://onomichi-u2.com/",
+             roomtype: "Roomtype: Deluxe Twin, Twin",
+             image:File.open("./app/assets/images/U2.main.jpg"),
+             image2:File.open("./app/assets/images/U2.lobby.jpg"),
+             image3:File.open("./app/assets/images/U2.room.jpg")
+             )
+    
+Lodge.create!(lodge:  "あなごのねどこ",
+             prefecture: "広島県",
+             postal_code: "〒722-0037",
+             address: "尾道市西御所町5-11",
+             phone_number: "TEL 0848-21-0550",
+             map: "https://goo.gl/maps/qLyupLpBkVBN6KK19",
+             type: "hostel",
+             hp_link: "http://anago.onomichisaisei.com/",
+             roomtype: "Roomtype: Mix dormitory, Female dormitory",
+             image:File.open("./app/assets/images/あなご.main.jpg"),
+             image2:File.open("./app/assets/images/あなご.lobby.jpg"),
+             image3:File.open("./app/assets/images/あなご.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "Tami Tottori",
+             prefecture: "鳥取県",
+             postal_code: "〒689-0712",
+             address: "東伯郡湯梨浜町大字中興寺340-1",
+             phone_number: "TEL 0858-41-2026",
+             map: "https://goo.gl/maps/9bnZSfeG2Q6EaWoF8",
+             type: "hostel",
+             hp_link: "http://www.tamitottori.com/",
+             roomtype: "Roomtype: Male dormitory, Female dormitory, Japanese Modern",
+             image:File.open("./app/assets/images/たみ.main.png"),
+             image2:File.open("./app/assets/images/たみ.lobby.jpg"),
+             image3:File.open("./app/assets/images/たみ.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "大山バックパッカーズ",
+             prefecture: "鳥取県",
+             postal_code: "〒689-4101",
+             address: "西伯郡伯耆町小林123-39",
+             phone_number: "TEL 0858-57-7428",
+             map: "https://goo.gl/maps/QC2SBqG1WQYjqkFZ9",
+             type: "hostel",
+             hp_link: "https://daisen-backpackers.com/",
+             roomtype: "Roomtype: Single-use, Twin, Triple, Family",
+             image:File.open("./app/assets/images/大山.main.png"),
+             image2:File.open("./app/assets/images/大山.lobby.png"),
+             image3:File.open("./app/assets/images/大山.room.png")
+             )
+             
+Lodge.create!(lodge:  "暮らす宿　他郷阿部家",
+             prefecture: "島根県",
+             postal_code: "〒694-0305",
+             address: "大田市大森町 ハ159-1",
+             phone_number: "TEL 0854-89-0022",
+             map: "https://goo.gl/maps/c1iLMuisJpayh9YN9",
+             type: "hotel",
+             hp_link: "https://www.gungendo.co.jp/pages/details/000118.php",
+             roomtype: "Roomtype: Japanese Modern, Western Style",
+             image:File.open("./app/assets/images/他郷.main.png"),
+             image2:File.open("./app/assets/images/他郷.lobby.png"),
+             image3:File.open("./app/assets/images/他郷.room.png")
+             )
+             
+Lodge.create!(lodge:  "輝雲荘",
+             prefecture: "島根県",
+             postal_code: "〒699-2501",
+             address: "大田市温泉津町温泉津ロ202-1",
+             phone_number: "TEL 0855-65-2008",
+             map: "https://goo.gl/maps/yRXtVuVvjMrkGVGw7",
+             type: "hotel",
+             hp_link: "http://www.kiunsoh.com/",
+             roomtype: "Roomtype: Japanese Modern, Family",
+             image:File.open("./app/assets/images/輝雲荘.main.jpg"),
+             image2:File.open("./app/assets/images/輝雲荘.lobby.jpg"),
+             image3:File.open("./app/assets/images/輝雲荘.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "uzuhouse",
+             prefecture: "山口県",
+             postal_code: "〒750-0003",
+             address: "下関市阿弥陀寺町7-8",
+             phone_number: "TEL 083-250-9787",
+             map: "https://g.page/uzuhouse?share",
+             type: "hostel",
+             hp_link: "https://uzuhouse.com/",
+             roomtype: "Roomtype: Mix dormitory, Female dormitory, Japanese Modern, Superior, Twin",
+             image:File.open("./app/assets/images/uzu.main.jpg"),
+             image2:File.open("./app/assets/images/uzu.lobby.jpg"),
+             image3:File.open("./app/assets/images/uzu.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "門司港ゲストハウス PORTO",
+             prefecture: "福岡県",
+             postal_code: "〒801-0873",
+             address: "北九州市門司区東門司1-10-6",
+             phone_number: "TEL 093-342-9938",
+             map: "https://goo.gl/maps/n4KJyyzRZ2bipPjM6",
+             type: "hostel",
+             hp_link: "https://moji-porto.com/",
+             roomtype: "Roomtype: Single, Double, Twin",
+             image:File.open("./app/assets/images/ポルト.main.jpg"),
+             image2:File.open("./app/assets/images/ポルト.lobby.jpg"),
+             image3:File.open("./app/assets/images/ポルト.room.jpg")
+             )
+             
+Lodge.create!(lodge:  "小屋場只只",
+             prefecture: "山口県",
+             postal_code: "〒745-0057",
+             address: "周南市大字大津島2763",
+             phone_number: "TEL 0834-85-2800",
+             map: "https://goo.gl/maps/Np8bKob4s3DEiBBh8",
+             type: "hotel",
+             hp_link: "http://koyaba.info/",
+             roomtype: "Roomtype: Single, Double, Twin",
+             image:File.open("./app/assets/images/小屋場.main.jpg"),
+             image2:File.open("./app/assets/images/小屋場.lobby.png"),
+             image3:File.open("./app/assets/images/小屋場.room.png")
+             )
