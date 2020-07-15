@@ -1,25 +1,26 @@
-<% provide(:title, "World") %>
+<% provide(:title, "Ryokan・Camp") %>
+<div class="lodge_page">
 
 <!--  検索拡張機能  -->
 <% if logged_in? %>
 
 <p>ホステル名検索</p>
-  <%= form_tag(lodges_world_path, :method => 'get' , class:'form4') do %>
-  <%= text_field_tag :search, '',class:'sbox4', placeholder:'ホステル名を入力　ex.Youth hostel' %>
+  <%= form_tag(lodges_ryokan_path, :method => 'get' , class:'form4') do %>
+  <%= text_field_tag :search, '',class:'sbox4', placeholder:'旅館名を入力　ex.音羽屋旅館' %>
   <button class="sbtn4" type="submit"><i class="fas fa-search"></i></button>
   <% end %>
   
 <div class="search_condition">
  <p>エリア別検索</p>
-  <%= form_tag(lodges_world_path, :method => 'get' , class:'form4') do %>
-  <%= text_field_tag :search, '',class:'sbox4', placeholder:'国名を入力　ex.ドイツ' %>
+  <%= form_tag(lodges_ryokan_path, :method => 'get' , class:'form4') do %>
+  <%= text_field_tag :search, '',class:'sbox4', placeholder:'都道府県を入力　ex. 新潟' %>
   <button class="sbtn4" type="submit"><i class="fas fa-search"></i></button></div>
   <% end %>
   
 <% end %>
 
 <div class="buttons-coll">  
-<button class="custom-btn btn-3"><span><%= link_to 'World', lodges_world_path, class: 'top_name' %></span></button>
+<button class="custom-btn btn-3"><span><%= link_to 'Ryokan Camp', lodges_ryokan_path, class: 'top_name' %></span></button>
 </div>
 
 <div class="dropdown">
@@ -28,16 +29,17 @@
 　　<span class="caret"></span>
 　</button>
 　<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-　　<li><%= link_to("3", "/world/3") %></li>
-　　<li><%= link_to("5", "/world/5") %></li>
-　　<li><%= link_to("10", "/world/10") %></li>
-　　<li><%= link_to("20", "/world/20") %></li>
+　　<li><%= link_to("10", "/ryokan/10") %></li>
+　　<li><%= link_to("20", "/ryokan/20") %></li>
+　　<li><%= link_to("30", "/ryokan/30") %></li>
+　　<li><%= link_to("50", "/ryokan/50") %></li>
 　</ul>
 　<label>件ずつ表示する</label>
 </div>
 
 <%= will_paginate @lodges, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
 
+<section id="sample" class="fade_off">
 <% @lodges.each do |lodge| %>
   <p class="hotel_name"><%= link_to lodge.lodge, lodge.hp_link %></p>
   <ul class=hotel_info>
@@ -47,5 +49,7 @@
   <li><%= lodge.roomtype %></li>
   </ul>
 <% end %>
+</section>
 
 <%= will_paginate @lodges, :previous_label => ' &lt 前へ', :next_label => '次へ &gt'%>
+</div>

@@ -1,4 +1,7 @@
 <% provide(:title, "Hostel") %>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<div class="lodge_page">
 
 <!--  検索拡張機能  -->
 <% if logged_in? %>
@@ -28,16 +31,17 @@
 　　<span class="caret"></span>
 　</button>
 　<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-　　<li><%= link_to("3", "/hostel/3") %></li>
-　　<li><%= link_to("5", "/hostel/5") %></li>
 　　<li><%= link_to("10", "/hostel/10") %></li>
 　　<li><%= link_to("20", "/hostel/20") %></li>
+　　<li><%= link_to("30", "/hostel/30") %></li>
+　　<li><%= link_to("50", "/hostel/50") %></li>
 　</ul>
 　<label>件ずつ表示する</label>
 </div>
 
 <%= will_paginate @lodges, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
 
+<section id="sample" class="fade_off">
 <% @lodges.each do |lodge| %>
   <p class="hotel_name"><%= link_to lodge.lodge, lodge.hp_link %></p>
   <%= image_tag lodge.image.to_s %>　<%= image_tag lodge.image2.to_s %>　<%= image_tag lodge.image3.to_s %>
@@ -48,5 +52,7 @@
   <li><%= lodge.roomtype %></li>
   </ul>
   <%end%>
+  </section>
   
 <%= will_paginate @lodges, :previous_label => ' &lt 前へ', :next_label => '次へ &gt'%>
+</div>

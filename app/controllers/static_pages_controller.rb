@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def policy
+  def concept
   end
   
   def about

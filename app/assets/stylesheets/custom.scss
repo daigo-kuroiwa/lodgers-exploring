@@ -16,9 +16,10 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
-body {
-  padding-top: 150px;
+.container{
+   width: 100%;
 }
+
 
 section {
   overflow: auto;
@@ -28,12 +29,6 @@ textarea {
   resize: vertical;
 }
 
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
-}
 
 /* typography */
 
@@ -58,7 +53,7 @@ h2 {
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 15px;
   line-height: 1.7em;
 }
 
@@ -69,14 +64,14 @@ p {
   font-family: 'Courgette', cursive;
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 28px;
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: yellow;
+    color: #978029;
     text-decoration: none;
   }
 }
@@ -89,8 +84,32 @@ nav{
 
 /* footer */
 
-footer {
-  margin-top: 45px;
+.footer1 {
+  
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+.footer2{
+  margin-top: 0px;
+  margin-bottom: 1300px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
@@ -116,32 +135,324 @@ footer {
 
 
 /*home*/
-.title{
-  font-size:55px;
-  font-family:'Londrina Shadow', cursive;
+
+.slide {
+  position   : relative;
+  overflow   : hidden;
+                    /* 画像のサイズに合わせて変更ください */
+  width      : 1410px;
+  height     : 780px;
+  margin     : auto;      /* サンプルは中央寄せの背景：白 */
+  background : #fff;
+}
+ 
+ /*=== 画像の設定 ======================================= */
+.slide img {
+  display    : block;
+  position   : absolute;
+                      /* 画像のサイズを表示エリアに合せる */
+  width      : inherit;
+  height     : inherit;
+  opacity    : 0;
+  animation  : slideAnime 15s ease infinite;
+}
+ 
+ /*=== スライドのアニメーションを段差で開始する ========= */
+.slide img:nth-of-type(1) { animation-delay: 0s }
+.slide img:nth-of-type(2) { animation-delay: 3s }
+.slide img:nth-of-type(3) { animation-delay: 6s }
+.slide img:nth-of-type(4) { animation-delay: 9s }
+.slide img:nth-of-type(5) { animation-delay: 12s }
+ 
+ /*=== スライドのアニメーション ========================= */
+@keyframes slideAnime{
+   0% { opacity: 0 }
+   2% { opacity: 1 }
+  18% { opacity: 1 }
+  20% { opacity: 0 }
+ 100% { opacity: 0 }
+}
+
+.Concept{
+  margin-top: 60px;
+  text-align: center;
+}
+.Concept h1{
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: black;
+}
+.word h2{
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding-bottom: 0px;
+  margin-bottom: 10px;
+}
+.word p{
+  color: $gray-light;
+  font-size: 13px;
+}
+.intro p{
+  font-size: 15px;
+  margin-top: 30px;
+  line-height: 10px;
+  letter-spacing: 1px;
+  color: black;
+}
+.theme{
+  font-weight: bold;
+  color: #978029;
+}
+
+.intro2{
+  margin-top: 30px;
+  color: black;
+}
+.intro2 p{
+  font-size: 12px;
+}
+.caution{
+  font-size: 6px;
+}
+.intro3 p{
+  font-size: 20px;
+  margin-top: 40px;
+  color: black;
+  font-family: "Libre Baskerville";
+  font-weight: bold;
+}
+
+
+
+.hidden_box {
+    margin-top: 30px;
+    text-align: center;
+    
+}
+
+/*ボタン装飾*/
+.hidden_box label {
   
+    padding: 15px 50px 15px 50px;
+    font-weight: bold;
+    cursor :pointer;
+    color: white;
+    background-color: #800000;
+    box-shadow:4px 4px #555;
+    border-radius:10px;
+    text-shadow:-1px -1px #555;
+    
 }
 
-.world_logo{
-  margin-right:110px;
+/*ボタンホバー時*/
+.hidden_box label:hover {
+    background-color: #008080;
+    color: black;
 }
 
-.world_logo:active{
+/*ボタンクリック時*/
+.hidden_box label:active{
 	 box-shadow:none;
 	 position:relative;
 	 top:7px;
 }
 
-.hostel_logo:active{
-	 box-shadow:none;
-	 position:relative;
-	 top:7px;
+/*チェックは見えなくする*/
+.hidden_box input {
+    display: none;
 }
 
-.hotel_logo:active{
-	 box-shadow:none;
-	 position:relative;
-	 top:7px;
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+.hidden_show{
+  height: 0px;
+}
+
+.fa-route{
+  padding-right: 5px;
+}
+
+.title{
+  font-size: 55px;
+  font-family:'Londrina Shadow', cursive;
+  margin-top: 50px;
+}
+.blink{
+  animation-name :sampleAnime;
+  display: inline-block;
+  color:#978029;
+  animation: sampleAnime 2s infinite;
+}
+@keyframes sampleAnime{
+  100% { 
+    transform: rotateX(360deg); 
+    color:#978029;
+    
+  }
+}
+
+/*conceptページ*/
+.concept_page{
+  margin-top: 200px;
+}
+
+
+
+/*ホームのLodge一覧*/
+
+/*hostelページ*/
+.hostel_logo{
+	 box-shadow: none;
+	 position: absolute; top: 1700px; left: 0px;
+	 width: 720px;
+   height: 380px;
+}
+
+.hostel_type{
+   position: absolute; top: 1700px; right: 0px;
+	 width: 720px;
+   height: 380px;
+   background-color: #B8860B;
+    text-align: center;
+}
+.hostel_type h2{
+   position: relative; top: 0px; right: 0px;
+   color: white;
+   list-style: none;
+   font-size: 20px;
+   line-height: 0px;
+   margin-top: 40px;
+   font-size: 30px;
+   font-family: "Bana Chips";
+   letter-spacing: 5px;
+    text-align: center;
+}
+
+.hostel_explain{
+  width: 650px;
+  text-align: left;
+  padding-left: 100px;
+  color: white;
+}
+
+/*hotelページ*/
+.hotel_logo{
+	 box-shadow: none;
+	 position: absolute; top: 380px; right: 0px;
+	 width: 720px;
+   height: 380px;
+}
+.hotel_type{
+   position: absolute; top: 380px; right: 720px;
+	 width: 720px;
+   height: 380px;
+   background-color: #339999;
+   text-align: center;
+}
+.hotel_type h2{
+   position: relative; top: 0px; right: 0px;
+   color: white;
+   list-style: none;
+   font-size: 20px;
+   line-height: 0px;
+   margin-top: 40px;
+   font-size: 30px;
+   font-family: "Bana Chips";
+   letter-spacing: 5px;
+   text-align: center;
+}
+
+.hotel_explain{
+  width: 650px;
+  text-align: left;
+  padding-left: 100px;
+  color: white;
+}
+
+/*ryokanページ*/
+.ryokan_logo{
+	 box-shadow: none;
+	 position: absolute; top: 740px; right: 720px;
+	 width: 720px;
+   height: 380px;
+}
+.ryokan_type{
+   position: absolute; top: 740px; left: 0px;
+	 width: 720px;
+   height: 380px;
+   background-color: #657739;
+   text-align: center;
+}
+.ryokan_type h2{
+   position: relative; top: 0px; right: 0px;
+   color: white;
+   list-style: none;
+   font-size: 20px;
+   line-height: 0px;
+   margin-top: 40px;
+   font-size: 30px;
+   font-family: "Bana Chips";
+   letter-spacing: 5px;
+   text-align: center;
+}
+
+.ryokan_explain{
+  width: 650px;
+  text-align: left;
+  padding-left: 100px;
+  color: white;
+}
+
+.checkin label {
+    padding: 15px 120px 15px 120px;
+    font-weight: bold;
+    cursor :pointer;
+    background-color: #EEEEEE;
+    color: black;
+}
+.checkin label:hover{
+    
+    background-color: #EEEEEE;
+    
+}
+.click{
+  color: black;
+  padding-left: 10px;
+  display: block;
+}
+
+
+
+.icon_form_2{
+  font-size: 10px;
+  display: inline-block;
+  width: auto;
+  padding: 8px 15px 8px 15px;
+  font-family: "Lato","游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-weight: bold;
+  background-color:#978029;
+  letter-spacing: 0.1em;
+  text-decoration: none !important;
+  text-align: center;
+  color:white;
+  border: 0px solid #978029;
+  transition: all 0.2s ease;
+  
 }
 
 /* miscellaneous */
@@ -247,9 +558,10 @@ input {
 
 /*hostel page*/
 .top_name{
-  font-size:45px;
+  font-size: 45px;
   color: #353535;
   font-family: "Cormorant Garamond", serif;
+  
 }
 .top_name:hover{
   color: #978029;  
@@ -258,6 +570,7 @@ input {
   width: 90%;
   margin: 50px auto;
   text-align: center;
+  padding-right: 160px;
 }
 .custom-btn {
   padding: 10px 25px;
@@ -271,8 +584,8 @@ input {
   display: inline-block;
 }
 .btn-3 {
-  width: 200px;
-  height: 100px;
+  width: 220px;
+  height: 150px;
   line-height: 42px;
   padding-top: 20px;
   border: none;
@@ -341,7 +654,12 @@ input {
   margin-top:40px;
 }
 .hotel_name{
-  font-size:25px;
+  font-size:28px;
+  text-align: center;
+  font-family: "OptimaLTPro-Bold";
+  font-weight: bold;
+  letter-spacing: 0.07em;
+  padding-right: 150px;
 }
 .image_list{
   display:inline-block;
@@ -437,4 +755,25 @@ color:#FFFF99;
   color:white;
   border: 0px solid #978029;
   transition: all 0.2s ease;
+}
+
+.lodge_page{
+  margin-top: 100px;
+  margin-left: 150px;
+  width: 1300px;
+  margin-bottom: 0px;
+}
+
+.fade_off {
+    opacity: 0;
+    -webkit-transition: all 5s;
+    -moz-transition: all 5s;
+    -o-transition: all 5s;
+    -ms-transition: all 5s;
+    transition: all 1s;
+}
+
+.fade_on {
+    opacity: 1;
+    transition: all 4s;
 }

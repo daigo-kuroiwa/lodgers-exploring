@@ -896,3 +896,17 @@ Lodge.create!(lodge:  "小屋場只只",
              image2:File.open("./app/assets/images/小屋場.lobby.png"),
              image3:File.open("./app/assets/images/小屋場.room.png")
              )
+             
+Lodge.create!(lodge:  "小屋場只只",
+             prefecture: "山口県",
+             postal_code: "〒745-0057",
+             address: "周南市大字大津島2763",
+             phone_number: "TEL 0834-85-2800",
+             map: "https://goo.gl/maps/Np8bKob4s3DEiBBh8",
+             type: "hotel",
+             hp_link: "http://koyaba.info/",
+             roomtype: "Roomtype: Single, Double, Twin",
+             image:File.open("./app/assets/images/小屋場.main.jpg"),
+             image2:File.open("./app/assets/images/小屋場.lobby.png"),
+             image3:File.open("./app/assets/images/小屋場.room.png")
+             )

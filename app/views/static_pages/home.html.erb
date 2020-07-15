@@ -1,10 +1,99 @@
-<body>
-<h1 class="title">What type of Lodge would you like to stay??</h1>
-<%= link_to image_tag("dorm.jpg", alt: "Hostel logo", class: "hostel_logo"), lodges_hostel_path%>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
-<%= link_to image_tag("world.jpg", alt: "world map", class: "world_logo"), lodges_world_path%>
+<footer class="footer2">
+    <div class="slide" id="makeImg">
+  <%= image_tag "U2.main.jpg" %>
+  <%= image_tag "LANDABOUT.room.jpg" %>
+  <%= image_tag "ちいおり.main.jpg" %>
+  <%= image_tag "kumano.room.jpg" %>
+  <%= image_tag "扉温泉.lobby.jpg" %>
+</div>
 
-<%= link_to image_tag("hotel.jpg", alt: "Hotel logo", class: "hotel_logo"), lodges_hotel_path%>
-</body>
+<section id="sample" class="fade_off">
+<div class="Concept">
+    <h1>Concept</h1>
+    <div class="word">
+        <h2>〜旅行者〜</h2>
+        <p>”どこに旅行するかは決まったけど、宿泊先はどこにしよう、、？まあ予約サイトから地名で検索して、良さげなところにしよう。”</p>
+        <p>”有名で評価の高いホテルか旅館が無難だよね。良さげな宿泊施設をお気に入りして一覧で見れる、宿泊施設専用アプリがあると便利だよね！”</p>
+        <h2>〜宿泊施設〜</h2>
+        <p>”予約サイト経由の予約ばかり、、手数料が取られて売上が伸びないなあ。知名度を上げて、公式HPを見て直接予約してくれるゲストを増やしたい！”</p>
+        <p>”ホステルでもカップル・グループ向けの部屋があることをもっと広めたいなあ。”</p>
+    </div>
+    <div class="intro">
+        <p>そんな両者の需要を満たすことができたら、、を実現した、ある種ユーザーと宿泊施設のマッチング要素を含んだWebアプリです。</p>
+        <p>テーマは<span class="theme">"Lodge=宿"</span>。ホテルだけではない、多様な<span class="theme">"Lodge"</span>を紹介していきます。</p>
+        <p>SNSの普及により、多くの宿泊施設がInstagramやTwitterを駆使して内部の画像やイベント情報を発信したりと、身近になってきています。</p>
+        <p>しかし、依然として旅行者は予約サイト経由で検索~予約までを一貫して行い、宿泊施設選びを楽しんでいないのではないかと思います。</p>
+        <p>そこでこのWebアプリを通じてその楽しさを知り、行きたい宿泊施設があるから旅行先を決める、といった旅行の選び方が多様化することを望んでいます。</p>
+    </div>
+    <div class="intro2">
+        <p>ー掲載基準は製作者の選択が大半となりますが、Booking.comのクチコミが8.2以上*<span class="caution">製作時点</span> を大まかな基準としています(一部例外あり)ー</p>
+        <p>ーターゲットを旅行者においているため、ビジネスホテル・外資系高級ホテルは掲載していません(一部例外あり)ー</p>
+    </div>
+    <div class="intro3">
+        <p>Then, the guests who understand the concept, go to Entrance...🚪</p>
+    </div>
+</div>
+</section>
 
+<div class="hidden_box">
+    <label for="label1"><i class="fas fa-route"></i>Entrance</label>
+    <input type="checkbox" id="label1"/>
+    <div class="hidden_show">
+        <h1 class="title">~Choose from 3 types of <span class="blink">Lodges</span> below~</h1>
+
+        <div class="reset hotel_type-list", style= "margin-top: 60px;" >
+
+    
+        <%= link_to image_tag("Tap.room.jpg", alt: "hostel image", class: "hostel_logo")%>
+
+            <div class="hostel_type">
+                <h2>01. Hostel・Guesthouse</h2>
+                <p class="hostel_explain">ホステル、ゲストハウスといえば、「安く泊まれるドミトリーがあって、外国人のバックパッカーが泊まりに行く場所」というイメージではないでしょうか？
+                そのイメージはあながち間違ってはいないのですが、近年は若者やグループ向けに、ドミトリーだけでなく個室を多く併設しているホステルが増えています。
+                共同ロビーにてオーナーの温かさや情報交換、また、地域に根ざして運営していることからその土地の生活や魅力を身近に感じることができる点が何よりの魅力です。
+                多くの施設は共同風呂・トイレとなり、アメニティはタオルが有料や寝間着がないなど、宿泊費が安価な分その他で料金が発生することを理解した上で宿泊することを推奨しています。</p>
+                <div class="checkin">
+                    <label for="label2"><i class="fas fa-bed"></i><%= link_to "Check in", lodges_hostel_path, class: "click" %></label>
+                    <input type="checkbox" id="label2"/>
+                </div>
+            
+                
+        <%= link_to image_tag("SHE_KYOTO.room.jpg", alt: "hotel image", class: "hotel_logo")%>
+        
+            <div class="hotel_type">
+                <h2>02. Hotel</h2>
+                <p class="hotel_explain">ゲストがホテルに求める物・事って一体なんだろう。ホテル運営は常々需要を考えて、ゲストに最大限の非日常を供給できるよう努力しています。
+                ホテルにも様々な種別がありますが、"本", "倉庫", "写真映え" "1日1組限定" といったコンセプトをもったコンセプトホテルが近年は増えてきているのが特徴です。
+                部屋にはユニットバス付き、朝食はビュッフェ式といったステレオタイプなホテルはいまだ人気を誇り、グループや家族で泊まるのに適したホテルも多く紹介しています。
+                内装で選ぶ。立地のよさで選ぶ。自分の雰囲気に合いそうだから選ぶ。多種多様なホテルを、多種多様な選び方で楽しんでください。</p>
+                 <div class="checkin">
+                    <label for="label2"><i class="fas fa-hotel"></i><%= link_to "Check in", lodges_hotel_path, class: "click" %></label>
+                    <input type="checkbox" id="label2"/>
+                 </div>
+                
+            </div>
+    
+        <%= link_to image_tag("まほろば.room.png", alt: "ryokan image", class: "ryokan_logo")%>
+        
+            <div class="ryokan_type">
+                <h2>03. Ryokan・Camp</h2>
+                <p class="ryokan_explain">古風な建物・土地の歴史、天然温泉、グループで一棟貸し切りのキャンプなど、特別な目的をもった宿泊体験をここでは紹介しています。
+                ホステルやゲストハウス、ホテルとはまた違った旅館とはどんな特徴があると思いますか？それぞれ異なる部分もありますが、天然温泉があることや、食事は地のものを使っている、
+                女将がその土地の風情を語ってくれるなど、よりローカルな雰囲気を味わい癒されて帰路に着くことが多いのではないかと思います。またキャンプといえば、外の開放的なスペーズで
+                自然を感じ、普段寝ることのないテントという空間で夜を過ごすことができる。どんな非日常を味わうことができるのかをテーマに、HPから隅々まで施設を研究してみてください。</p>
+                 <div class="checkin">
+                    <label for="label2"><i class="fas fa-campground"></i><%= link_to "Check in", lodges_ryokan_path, class: "click" %></label>
+                    <input type="checkbox" id="label2"/>
+                 </div>
+                
+            </div>
+            </div>
+
+
+        </div>
+</div>
+</div>
+</footer>
   

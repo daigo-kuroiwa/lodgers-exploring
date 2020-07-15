@@ -22,15 +22,15 @@ class LodgesController < ApplicationController
     render("hotel")
   end
   
-  def world
+  def ryokan
       @page = 10
-      @lodges=Lodge.where(type: "world").search(params[:search]).paginate(page: params[:page], per_page: @page)
+      @lodges=Lodge.where(type: "ryokan").search(params[:search]).paginate(page: params[:page], per_page: @page)
   end
   
-  def world_page
+  def ryokan_page
     @page = params[:per]
-    @lodges = Lodge.where(type: "world").paginate(page: params[:page], per_page: @page)
-    render("world")
+    @lodges = Lodge.where(type: "ryokan").paginate(page: params[:page], per_page: @page)
+    render("ryokan")
   end
   
   
