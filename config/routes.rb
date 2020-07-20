@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+  
   get 'lodges/new'
-  get 'password_resets/new'
-  get 'password_resets/edit'
+ 
+
   get 'sessions/new'
   get 'users/new'
-  get '/likes', to: 'likes#create'
-  get 'likes/index'
+
+  get 'users/like'
   get 'lodges/hostel'
   get 'lodges/hotel'
   get 'lodges/ryokan'
@@ -25,8 +26,12 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  resources :lodges
   resources :users
+  resources :lodges do
+  post 'add' => 'likes#create'
+  delete '/add' => 'likes#destroy'
+  end
+
   
   
 end

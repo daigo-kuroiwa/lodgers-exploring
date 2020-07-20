@@ -44,6 +44,11 @@
 <section id="sample" class="fade_off">
 <% @lodges.each do |lodge| %>
   <p class="hotel_name"><%= link_to lodge.lodge, lodge.hp_link %></p>
+  
+ <div id="like-btn-<%= lodge.id %>">
+   <%= render 'likes/like', lodge: lodge %>
+ </div>
+
   <%= image_tag lodge.image.to_s %>　<%= image_tag lodge.image2.to_s %>　<%= image_tag lodge.image3.to_s %>
   <ul class=hotel_info>
   <li><%= lodge.postal_code %></li>

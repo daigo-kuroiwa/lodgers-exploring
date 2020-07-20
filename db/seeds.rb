@@ -897,16 +897,17 @@ Lodge.create!(lodge:  "小屋場只只",
              image3:File.open("./app/assets/images/小屋場.room.png")
              )
              
-Lodge.create!(lodge:  "小屋場只只",
-             prefecture: "山口県",
-             postal_code: "〒745-0057",
-             address: "周南市大字大津島2763",
-             phone_number: "TEL 0834-85-2800",
-             map: "https://goo.gl/maps/Np8bKob4s3DEiBBh8",
-             type: "hotel",
-             hp_link: "http://koyaba.info/",
-             roomtype: "Roomtype: Single, Double, Twin",
-             image:File.open("./app/assets/images/小屋場.main.jpg"),
-             image2:File.open("./app/assets/images/小屋場.lobby.png"),
-             image3:File.open("./app/assets/images/小屋場.room.png")
+Lodge.create!(lodge:  "扉温泉 明神館",
+             prefecture: "長野県",
+             postal_code: "〒390-0222",
+             address: "松本市大字入山辺8967",
+             phone_number: "TEL 0263-31-2301",
+             map: "https://g.page/myojinkan?share",
+             type: "ryokan",
+             hp_link: "http://www.tobira-group.com/myojinkan/",
+             roomtype: "Roomtype: ",
+             image:File.open("./app/assets/images/.main.jpg"),
+             image2:File.open("./app/assets/images/.lobby.png"),
+             image3:File.open("./app/assets/images/.room.png")
              )
+             

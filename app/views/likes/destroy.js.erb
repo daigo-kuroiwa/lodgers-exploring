@@ -1,0 +1,1 @@
+$('#like-btn-<%= @lodge.id %>').html("<%= escape_javascript(render partial: "likes/like", locals: { lodge: @lodge }) %>");

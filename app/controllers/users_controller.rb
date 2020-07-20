@@ -4,10 +4,9 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
    
    
-  def index
-     @user = User.find(params[:id])
-    #特定のユーザーが登録したお気に入りを全て取得する
-     @likes = Like.where("user_id = ?", @user)
+  def show
+    @user = User.where(id: params[:id])
+    @likes = Like.where(user_id: @user)
   end
   
   def new

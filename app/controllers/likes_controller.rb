@@ -1,18 +1,23 @@
 class LikesController < ApplicationController
-  #お気に入り登録用アクション
-  def create
-    like=Like.new
-    like.user_id = current_user.id
-    like.lodge_id = params[:lodge_id]
+    before_action :logged_in_user
+    before_action :set_like
+
+   def create
+        user = current_user
+        lodge = Lodge.find(params[:lodge_id])
+        like = Like.create(user_id: user.id, lodge_id: lodge.id)
+   end
     
-    if like.save
-      redirect_to lodges_hostel_path, success: "お気に入りに登録しました"
-    else
-      redirect_to lodges_hostel_path, danger: "お気に入り登録に失敗しました"
+   def destroy
+        user = current_user
+        lodge = Lodge.find(params[:lodge_id])
+        like = Like.find_by(user_id: user.id, lodge_id: lodge.id)
+        like.delete
+   end
+
+    private
+    
+    def set_like
+        @lodge = Lodge.find(params[:lodge_id])
     end
-  end
-  
-  def index
-    @like_lodge=current_user.like_lodges
-  end
 end

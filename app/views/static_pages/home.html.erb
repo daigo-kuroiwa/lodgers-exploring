@@ -1,13 +1,18 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
+
 <footer class="footer2">
-    <div class="slide" id="makeImg">
+ <div class="slide" id="makeImg">
   <%= image_tag "U2.main.jpg" %>
   <%= image_tag "LANDABOUT.room.jpg" %>
-  <%= image_tag "ちいおり.main.jpg" %>
-  <%= image_tag "kumano.room.jpg" %>
-  <%= image_tag "扉温泉.lobby.jpg" %>
-</div>
+  <%= image_tag "アマネム.main.jpg" %>
+  <%= image_tag "とりい.room.jpg" %>
+  <%= image_tag "里山.lobby.jpg" %>
+ </div>
+ 
+ <div class="scrollBar">
+     SCROLL
+ </div>
 
 <section id="sample" class="fade_off">
 <div class="Concept">
@@ -23,16 +28,44 @@
     <div class="intro">
         <p>そんな両者の需要を満たすことができたら、、を実現した、ある種ユーザーと宿泊施設のマッチング要素を含んだWebアプリです。</p>
         <p>テーマは<span class="theme">"Lodge=宿"</span>。ホテルだけではない、多様な<span class="theme">"Lodge"</span>を紹介していきます。</p>
-        <p>SNSの普及により、多くの宿泊施設がInstagramやTwitterを駆使して内部の画像やイベント情報を発信したりと、身近になってきています。</p>
-        <p>しかし、依然として旅行者は予約サイト経由で検索~予約までを一貫して行い、宿泊施設選びを楽しんでいないのではないかと思います。</p>
-        <p>そこでこのWebアプリを通じてその楽しさを知り、行きたい宿泊施設があるから旅行先を決める、といった旅行の選び方が多様化することを望んでいます。</p>
+        <p>SNSの普及により、多くのLodgeがInstagramやTwitterを駆使して内部の画像やイベント情報を発信したりと、Lodgeが身近になってきたこの頃。</p>
+        <p>しかし、依然として旅行者は予約サイト経由で検索~予約までを一貫して行い、Lodge選びを楽しんでいないのではないだろうか。</p>
+        <p>そこでこのWebアプリを通じてその楽しさを知り、行きたいLodgeがあるから旅行先を決める、といった旅行の選び方が多様化することを望んでいます。</p>
     </div>
     <div class="intro2">
         <p>ー掲載基準は製作者の選択が大半となりますが、Booking.comのクチコミが8.2以上*<span class="caution">製作時点</span> を大まかな基準としています(一部例外あり)ー</p>
         <p>ーターゲットを旅行者においているため、ビジネスホテル・外資系高級ホテルは掲載していません(一部例外あり)ー</p>
     </div>
+</div>
+</section>
+
+<section id="sample2" class="fade_off">
+<div class="sign_up">
+    <h1>Sign up</h1>    
+    <div class="word2">
+        <h2>宿泊前にすることとして、予約は必須。</h2>
+        <h2>予約をしていただいたゲスト様のみ、以下の機能をお使いいただけます。</h2>
+        
+            <p>・検索機能</p>
+            <p class="detail">ー施設名、または都道府県名で各Lodgeカテゴリー別に検索ができ、気になる施設をお探しいただけますー</p>
+             <%= image_tag "検索1.png", size: '320x240' %>
+            <p class="detail2">※都道府県名だけでなく、"箱根" といったようにエリア別の検索も可能です</p>
+       
+        
+               
+        <p>・お気に入り機能</p>
+        <p class="detail">ー今後行きたいと思う施設をお気に入りすることができ、いつでも一覧として見ることができますー</p>
+        <%= image_tag "検索1.png", size: '320x240' %>
+      
+       
+        <h2 class="form_detail">ご予約はこちらの<%= link_to "予約フォーム", signup_path, class: 'book_form' %>からしていただきますようお願い致します。</h2>
+        <h2>ご利用、心よりお待ちしております。</h2>
+        
+        
+    </div>
+   
     <div class="intro3">
-        <p>Then, the guests who understand the concept, go to Entrance...🚪</p>
+        <p>それでは、コンセプトを理解しご予約いただいたお客様からエントランスへ、、🚪</p>
     </div>
 </div>
 </section>
@@ -46,7 +79,7 @@
         <div class="reset hotel_type-list", style= "margin-top: 60px;" >
 
     
-        <%= link_to image_tag("Tap.room.jpg", alt: "hostel image", class: "hostel_logo")%>
+        <%= image_tag("Tap.room.jpg", alt: "hostel image", class: "hostel_logo")%>
 
             <div class="hostel_type">
                 <h2>01. Hostel・Guesthouse</h2>
@@ -60,7 +93,7 @@
                 </div>
             
                 
-        <%= link_to image_tag("SHE_KYOTO.room.jpg", alt: "hotel image", class: "hotel_logo")%>
+        <%= image_tag("SHE_KYOTO.room.jpg", alt: "hotel image", class: "hotel_logo")%>
         
             <div class="hotel_type">
                 <h2>02. Hotel</h2>
@@ -75,7 +108,7 @@
                 
             </div>
     
-        <%= link_to image_tag("まほろば.room.png", alt: "ryokan image", class: "ryokan_logo")%>
+        <%= image_tag("まほろば.room.png", alt: "ryokan image", class: "ryokan_logo")%>
         
             <div class="ryokan_type">
                 <h2>03. Ryokan・Camp</h2>
@@ -90,10 +123,18 @@
                 
             </div>
             </div>
-
-
         </div>
-</div>
+       
+<section id="sample3" class="fade_off">     
+            <div class="Impression">
+                <h1>Impression<h1>
+                  　<p>当Webサイトをご使用いただきありがとうございました。</p>
+                  　<p>今後の運用に向けて、"こうだったら使いやすかった", "ここの機能がよかった" など、是非ご意見をお寄せいただけると嬉しいです。</p>
+                  　
+            </div>
+</section>
+
+    </div>
 </div>
 </footer>
   

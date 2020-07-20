@@ -17,7 +17,7 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 .container{
-   width: 100%;
+   width: auto;
 }
 
 
@@ -85,7 +85,7 @@ nav{
 /* footer */
 
 .footer1 {
-  
+  margin-top: 100px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
@@ -107,9 +107,11 @@ nav{
     }
   }
 }
+
+/*home画面*/
 .footer2{
   margin-top: 0px;
-  margin-bottom: 1300px;
+  margin-bottom: 500px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
@@ -140,10 +142,11 @@ nav{
   position   : relative;
   overflow   : hidden;
                     /* 画像のサイズに合わせて変更ください */
-  width      : 1410px;
+  width      : 1430px;
   height     : 780px;
   margin     : auto;      /* サンプルは中央寄せの背景：白 */
   background : #fff;
+  opacity    : 1;
 }
  
  /*=== 画像の設定 ======================================= */
@@ -156,6 +159,18 @@ nav{
   opacity    : 0;
   animation  : slideAnime 15s ease infinite;
 }
+
+.slide p {
+  display    : inline-block;
+  position   : absolute;
+                      /* 画像のサイズを表示エリアに合せる */
+  width      : inherit;
+  height     : inherit;
+  opacity    : 0;
+  animation  : slideAnime 15s ease infinite;
+}
+
+
  
  /*=== スライドのアニメーションを段差で開始する ========= */
 .slide img:nth-of-type(1) { animation-delay: 0s }
@@ -171,6 +186,68 @@ nav{
   18% { opacity: 1 }
   20% { opacity: 0 }
  100% { opacity: 0 }
+}
+
+.scrollBar{
+  display: inline-block;
+  position: absolute;
+  right: 700px;
+  bottom: 0;
+  z-index: 2;
+  padding: 10px 10px 110px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  writing-mode: vertical-lr;
+  font-weight: bold;
+}
+.scrollBar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 100px;
+  background: #fff;
+  animation: sdl 2s cubic-bezier(1, 0, 0, 1) infinite;
+}
+@keyframes sdl {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  35% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  35.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  70%, 100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+
+/*conceptページが可視化したら入る動き*/
+.fade_off {
+    opacity: 0;
+    -webkit-transition: all 5s;
+    -moz-transition: all 5s;
+    -o-transition: all 5s;
+    -ms-transition: all 5s;
+    transition: all 1s;
+}
+
+.fade_on {
+    opacity: 1;
+    transition: all 4s;
 }
 
 .Concept{
@@ -224,6 +301,51 @@ nav{
   font-weight: bold;
 }
 
+.sign_up{
+  margin-top: 60px;
+  text-align: center;
+}
+.sign_up h1{
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: black;
+}
+.word2 h2{
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding-bottom: 0px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.word2 p{
+  font-size: 16px;
+  margin-top: 30px;
+  line-height: 10px;
+  letter-spacing: 1px;
+  color: black;
+  text-align: center;
+  padding-right: 20px;
+  font-weight: bold;
+}
+.word2 p.detail{
+  font-size: 12px;
+  margin-top: 18px;
+  font-weight: normal;
+}
+.word2 p.detail2{
+  font-size: 12px;
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+.form_detail{
+  margin-top: 60px;
+}
+.book_form{
+  font-size: 18px;
+}
+
 
 
 .hidden_box {
@@ -237,12 +359,12 @@ nav{
   
     padding: 15px 50px 15px 50px;
     font-weight: bold;
-    cursor :pointer;
+    cursor : pointer;
     color: white;
     background-color: #800000;
-    box-shadow:4px 4px #555;
-    border-radius:10px;
-    text-shadow:-1px -1px #555;
+    box-shadow: 4px 4px #555;
+    border-radius: 10px;
+    text-shadow: -1px -1px #555;
     
 }
 
@@ -296,21 +418,45 @@ nav{
   animation-name :sampleAnime;
   display: inline-block;
   color:#978029;
-  animation: sampleAnime 2s infinite;
+  animation: sampleAnime 2s infinite alternate;
 }
 @keyframes sampleAnime{
+  80% { 
+    transform: rotateX(360deg); 
+    color: #339999;
+  }
   100% { 
     transform: rotateX(360deg); 
-    color:#978029;
-    
+    color:  #657739;
   }
 }
 
 /*conceptページ*/
 .concept_page{
   margin-top: 200px;
+  text-align: center;
 }
-
+.sign_up_page{
+  margin-top: 200px;
+  text-align: center;
+}
+.about_page{
+  margin-top: 200px;
+  text-align: center;
+}
+.contact_page{
+  margin-top: 200px;
+  text-align: center;
+}
+.setting_page{
+  margin-top: 200px;
+}
+.login_page{
+  margin-top: 200px;
+}
+.like_page{
+  margin-top: 200px;
+}
 
 
 /*ホームのLodge一覧*/
@@ -318,13 +464,13 @@ nav{
 /*hostelページ*/
 .hostel_logo{
 	 box-shadow: none;
-	 position: absolute; top: 1700px; left: 0px;
+	 position: absolute; top: 2700px; left: 0px;
 	 width: 720px;
    height: 380px;
 }
 
 .hostel_type{
-   position: absolute; top: 1700px; right: 0px;
+   position: absolute; top: 2700px; right: 0px;
 	 width: 720px;
    height: 380px;
    background-color: #B8860B;
@@ -424,17 +570,33 @@ nav{
     cursor :pointer;
     background-color: #EEEEEE;
     color: black;
+    text-shadow: none;
 }
 .checkin label:hover{
-    
     background-color: #EEEEEE;
-    
 }
 .click{
   color: black;
   padding-left: 10px;
-  display: block;
 }
+
+.Impression{
+  margin-top: 1300px;
+  margin-bottom: 10px;
+}
+.Impression h1{
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: black;
+}
+.Impression p{
+  line-height: 10px;
+}
+
+
+
+
 
 
 
@@ -493,14 +655,7 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
 
-.gravatar_edit {
-  margin-top: 15px;
-}
 
 /* forms */
 
@@ -764,16 +919,10 @@ color:#FFFF99;
   margin-bottom: 0px;
 }
 
-.fade_off {
-    opacity: 0;
-    -webkit-transition: all 5s;
-    -moz-transition: all 5s;
-    -o-transition: all 5s;
-    -ms-transition: all 5s;
-    transition: all 1s;
+.icon-btn-liked {
+  color: red;
 }
 
-.fade_on {
-    opacity: 1;
-    transition: all 4s;
+.icon-btn-not-like {
+  color: red;
 }

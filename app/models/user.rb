@@ -9,7 +9,8 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   has_many :likes, dependent: :destroy
-  has_many :lodges, through: :likes
+  has_many :like_lodges, through: :likes, source: :lodge
+  belongs_to :lodge
   
   
     
