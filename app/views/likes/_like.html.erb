@@ -1,9 +1,9 @@
 <% if lodge.liked_by?(current_user) %>
    <%= link_to(lodge_add_path(lodge), method: :delete, remote: true, id: "like-button-#{lodge.id}") do %>
-       <i class="fa-lg fas fa-heart icon-btn-liked"></i>
+       <i class="fa-lg fas fa-heart icon-btn-liked"></i><%= lodge.likes.count %>
    <% end %>
 <% else %>
    <%= link_to(lodge_add_path(lodge), method: :post, remote: true, id: "like-button-#{lodge.id}") do %>
-       <i class="fa-lg fas fa-heart icon-btn-not-like"></i>
+       <i class="fa-lg fas fa-heart icon-btn-not-like"></i><%= lodge.likes.count %>
    <% end %>
 <% end %>

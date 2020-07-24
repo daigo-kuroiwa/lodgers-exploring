@@ -8,7 +8,6 @@ class UsersController < ApplicationController
     @user = User.where(id: params[:id])
     @likes = Like.where(user_id: @user)
     @lodges= Lodge.where(type: "all").search(params[:search])
-    
   end
   
   

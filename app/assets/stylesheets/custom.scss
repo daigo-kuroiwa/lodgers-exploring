@@ -32,9 +32,7 @@ textarea {
   resize: vertical;
 }
 
-body {
-  width: 100%;
-}
+
 
 /* typography */
 
@@ -93,6 +91,7 @@ nav{
 .footer1 {
   margin-top: 100px;
   padding-top: 5px;
+  
   /*border-top: 1px solid $gray-medium-light;*/
   color: $gray-light;
   text-align: center;
@@ -468,10 +467,6 @@ nav{
 .like_page{
   padding-right: 300px;
 }
-.favorite_page{
-  
-}
-
 
 
 
@@ -917,6 +912,7 @@ input {
   font-weight: bold;
   letter-spacing: 0.07em;
   padding-right: 150px;
+  margin-top: 40px;
 }
 .image_list{
   display:inline-block;
@@ -1023,11 +1019,14 @@ color:#FFFF99;
 
 .icon-btn-liked {
   color: red;
+  margin-right: 5px;
 }
 
 .icon-btn-not-like {
   color: #CCCCCC;
+  margin-right: 5px;
 }
 .heart-icon{
   padding-left: 1100px;
 }
+

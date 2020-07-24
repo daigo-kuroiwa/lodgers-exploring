@@ -15,6 +15,13 @@ class LikesController < ApplicationController
         like = Like.find_by(user_id: user.id, lodge_id: lodge.id)
         like.delete
     end
+    
+    def show
+        @lodge = Lodge.find_by(id: params[:id])
+        @user = @lodge.user
+        # 変数@likes_countを定義
+        @likes_count = Like.where(lodge_id: @lodge.id).count
+    end
 
     private
     def set_like

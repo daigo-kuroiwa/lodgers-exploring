@@ -5,14 +5,14 @@
 
 <p>ホテル名検索</p>
   <%= form_tag(lodges_hotel_path, :method => 'get' , class:'form4') do %>
-  <%= text_field_tag :search, '',class:'sbox4', placeholder:'ホテル名を入力　ex.HOTEL SHE' %>
+  <%= text_field_tag :search, '',class:'sbox4', placeholder:'ホテル名を入力　ex.箱根本箱' %>
   <button class="sbtn4" type="submit"><i class="fas fa-search"></i></button>
   <% end %>
 
 <div class="search_condition">
   <p>エリア別検索</p>
   <%= form_tag(lodges_hotel_path, :method => 'get' , class:'form4') do %>
-  <%= text_field_tag :search, '',class:'sbox4', placeholder:'都道府県を入力　ex.青森' %>
+  <%= text_field_tag :search, '',class:'sbox4', placeholder:'都道府県を入力　ex.広島' %>
   <button class="sbtn4" type="submit"><i class="fas fa-search"></i></button></div>
   <% end %>
   
