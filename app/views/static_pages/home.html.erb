@@ -57,10 +57,13 @@
         <p class="detail">ー今後行きたいと思う施設をお気に入りすることができ、いつでも一覧として見ることができますー</p>
         <%= image_tag "検索1.png", size: '320x240' %>
       
-       
-        <h2 class="form_detail">ご予約はこちらの<%= link_to "予約フォーム", signup_path, class: 'book_form' %>からしていただきますようお願い致します。</h2>
+        <% if logged_in? %>
+        <h2 class="login_causion">※お客様は既にご予約済みとなっております。</h2>
+        <% else %>
+        <h2 class="form_detail">ご予約はこちらの<%= link_to "Booking Form", signup_path, class: 'book_form' %>からしていただきますようお願い致します。</h2>
+        <h2>2回目のご利用のお客様はこちらの<%= link_to "Login Form", login_path, class: 'book_form' %>から再度ご利用いただきますようお願い致します。</h2>
         <h2>ご利用、心よりお待ちしております。</h2>
-        
+        <% end %>
         
     </div>
    
@@ -112,7 +115,7 @@
         
             <div class="ryokan_type">
                 <h2>03. Ryokan・Camp</h2>
-                <p class="ryokan_explain">古風な建物・土地の歴史、天然温泉、グループで一棟貸し切りのキャンプなど、特別な目的をもった宿泊体験をここでは紹介しています。
+                <p class="ryokan_explain">古風な建物・土地の歴史、天然温泉、グループで一棟貸し切りのキャンプなど、特���な目的をもった宿泊体験をここでは紹介しています。
                 ホステルやゲストハウス、ホテルとはまた違った旅館とはどんな特徴があると思いますか？それぞれ異なる部分もありますが、天然温泉があることや、食事は地のものを使っている、
                 女将がその土地の風情を語ってくれるなど、よりローカルな雰囲気を味わい癒されて帰路に着くことが多いのではないかと思います。またキャンプといえば、外の開放的なスペーズで
                 自然を感じ、普段寝ることのないテントという空間で夜を過ごすことができる。どんな非日常を味わうことができるのかをテーマに、HPから隅々まで施設を研究してみてください。</p>
@@ -124,12 +127,25 @@
             </div>
             </div>
         </div>
-       
+        
 <section id="sample3" class="fade_off">     
+            <div class="New_listing">
+                <h1>New Listing<h1>
+                  　
+            </div>
+</section>
+       
+<section id="sample4" class="fade_off">     
             <div class="Impression">
                 <h1>Impression<h1>
                   　<p>当Webサイトをご使用いただきありがとうございました。</p>
-                  　<p>今後の運用に向けて、"こうだったら使いやすかった", "ここの機能がよかった" など、是非ご意見をお寄せいただけると嬉しいです。</p>
+                  　<p>今後の運用に向けて、"こんな機能があると嬉しい", "ここの機能がよかった" 等のご意見をいただけると幸いです。</p>
+                  　　<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSds8m1wkIrHtws0m3Ylm3UQ2LPY_MHMDs9A-ry5dIxSAMLF4A/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+                 <h1 class="contact">Contact<h1>　
+                  　<p>お仕事等に関するお問い合わせは以下へお願い致します。</p>
+                  　<div class="mail"><a href=#>info@lodgers.com(メール機能未実装)</a></div>
+                  　
+                  
                   　
             </div>
 </section>

@@ -10,10 +10,18 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   has_many :likes, dependent: :destroy
   has_many :like_lodges, through: :likes, source: :lodge
-  belongs_to :lodge
+  belongs_to :lodge, optional: true
   
   
-    
+  def Lodge.search(search)  #ここでのself.はLodge.を意味する
+    if search
+      Lodge.where(['lodge LIKE ? OR prefecture LIKE ? OR address LIKE ?', "%#{search}%","%#{search}%","%#{search}%"]).uniq#検索とprefectureの部分一致を表示。#Lodge.は省略
+    else
+      Lodge.all
+    end
+  end
+  
+
     # 渡された文字列のハッシュ値を返す
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

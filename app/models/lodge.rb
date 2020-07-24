@@ -3,13 +3,13 @@ class Lodge < ApplicationRecord
   mount_uploader :image2, ImageUploader
   mount_uploader :image3, ImageUploader
   self.inheritance_column = :_type_disabled
-  has_many :likes, dependent: :destroy #User:Like => 1:多
+  has_many :likes
   has_many :users, through: :likes
-  belongs_to :user
+ 
  
  def liked_by?(user)
-    likes.where(user_id: user.id).exists?
- end 
+  likes.where(user_id: user.id).exists?
+ end
  
   
   def self.search(search)  #ここでのself.はLodge.を意味する

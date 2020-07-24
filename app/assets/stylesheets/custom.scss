@@ -14,6 +14,9 @@ $gray-medium-light: #eaeaea;
 }
 
 
+ul{
+  list-style: none;
+}
 /* universal */
 
 .container{
@@ -29,6 +32,9 @@ textarea {
   resize: vertical;
 }
 
+body {
+  width: 100%;
+}
 
 /* typography */
 
@@ -87,50 +93,28 @@ nav{
 .footer1 {
   margin-top: 100px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
+  /*border-top: 1px solid $gray-medium-light;*/
   color: $gray-light;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
+  text-align: center;
+  
+  small{
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
   }
 }
 
 /*home画面*/
 .footer2{
   margin-top: 0px;
-  margin-bottom: 500px;
+  margin-bottom: 100px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
+  /*border-top: 1px solid $gray-medium-light;*/
   color: $gray-light;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
+  text-align: center;
+  
+  small{
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
   }
 }
 
@@ -339,6 +323,10 @@ nav{
   font-weight: normal;
   margin-bottom: 50px;
 }
+.login_causion{
+  margin-top: 50px;
+  color: red;
+}
 .form_detail{
   margin-top: 60px;
 }
@@ -440,23 +428,52 @@ nav{
   margin-top: 200px;
   text-align: center;
 }
+.sign_up_main{
+  background-image: url("本箱.lobby.jpg");
+  background-color: rgba(255,255,255,0.4);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center center;
+  height: 800px;
+}
 .about_page{
   margin-top: 200px;
   text-align: center;
 }
-.contact_page{
+
+.setting_page{
   margin-top: 200px;
   text-align: center;
 }
-.setting_page{
-  margin-top: 200px;
+.setting_main{
+  background-image: url("とりい.lobby.jpg");
+  background-color: rgba(255,255,255,0.4);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center center;
+  height: 800px;
 }
 .login_page{
   margin-top: 200px;
+  text-align: center;
+}
+.login_main{
+  background-image: url("水田.main.jpg");
+  background-color: rgba(255,255,255,0.4);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center center;
+  height: 800px;
 }
 .like_page{
-  margin-top: 200px;
+  padding-right: 300px;
 }
+.favorite_page{
+  
+}
+
+
+
 
 
 /*ホームのLodge一覧*/
@@ -580,8 +597,17 @@ nav{
   padding-left: 10px;
 }
 
-.Impression{
+.New_listing{
   margin-top: 1300px;
+}
+.New_listing h1{
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: black;
+}
+.Impression{
+  margin-top: 500px;
   margin-bottom: 10px;
 }
 .Impression h1{
@@ -592,6 +618,18 @@ nav{
 }
 .Impression p{
   line-height: 10px;
+}
+.contact{
+  margin-top: 100px;
+}
+.mail{
+  margin-top: 10px;
+  font-family: "Prophet", Helvetica, Arial, sans-serif;
+  font-size: 2.0rem;
+}
+.mail:hover{
+  opacity: 0.5;
+  touch-action: manipulation;
 }
 
 
@@ -801,6 +839,70 @@ input {
 }
 
 
+/*hostel,hotelのロゴの四角アニメーション*/
+.btn-4 {
+  width: 220px;
+  height: 100px;
+  line-height: 42px;
+  padding-top: 20px;
+  border: none;
+}
+.btn-4 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 65px;
+  padding-left: 16px;
+}
+.btn-4:before,
+.btn-4:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: #000;
+  transition: all 0.3s ease;
+}
+.btn-4:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-4:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-4:hover:before {
+  height: 100%;
+}
+.btn-4:hover:after {
+  width: 100%;
+}
+.btn-4 span:before,
+.btn-4 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: #000;
+  transition: all 0.3s ease;
+}
+.btn-4 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-4 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-4 span:hover:before {
+  height: 100%;
+}
+.btn-4 span:hover:after {
+  width: 100%;
+}
+
+
 
 
 
@@ -924,5 +1026,8 @@ color:#FFFF99;
 }
 
 .icon-btn-not-like {
-  color: red;
+  color: #CCCCCC;
+}
+.heart-icon{
+  padding-left: 1100px;
 }

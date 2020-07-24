@@ -22,7 +22,7 @@
 <% end %>
   
 <div class="buttons-coll">  
-<button class="custom-btn btn-3"><span><%= link_to 'Hostel', lodges_hostel_path, class: 'top_name' %></span></button>
+<button class="custom-btn btn-4"><span><%= link_to 'Hostel', lodges_hostel_path, class: 'top_name' %></span></button>
 </div>
 
 <div class="dropdown">
@@ -44,10 +44,12 @@
 <section id="sample" class="fade_off">
 <% @lodges.each do |lodge| %>
   <p class="hotel_name"><%= link_to lodge.lodge, lodge.hp_link %></p>
-  
- <div id="like-btn-<%= lodge.id %>">
-   <%= render 'likes/like', lodge: lodge %>
- </div>
+ 
+<div class="heart-icon"> 
+   <div id="like-btn-<%= lodge.id %>">
+     <%= render 'likes/like', lodge: lodge %>
+   </div>
+</div>
 
   <%= image_tag lodge.image.to_s %>　<%= image_tag lodge.image2.to_s %>　<%= image_tag lodge.image3.to_s %>
   <ul class=hotel_info>
@@ -56,7 +58,7 @@
   <li><%= lodge.phone_number %></li>
   <li><%= lodge.roomtype %></li>
   </ul>
-  <%end%>
+  <% end %>
   </section>
   
 <%= will_paginate @lodges, :previous_label => ' &lt 前へ', :next_label => '次へ &gt'%>

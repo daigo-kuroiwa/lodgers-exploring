@@ -3,6 +3,7 @@ class LodgesController < ApplicationController
    def hostel
      @page = 10
      @lodges=Lodge.where(type: "hostel").search(params[:search]).paginate(page: params[:page], per_page: @page)
+     @like = Like.new
    end
   
    def hostel_page
@@ -14,6 +15,7 @@ class LodgesController < ApplicationController
   def hotel
      @page = 10
      @lodges=Lodge.where(type: "hotel").search(params[:search]).paginate(page: params[:page], per_page: @page)
+     @like = Like.new
   end
   
   def hotel_page
@@ -25,6 +27,7 @@ class LodgesController < ApplicationController
   def ryokan
       @page = 10
       @lodges=Lodge.where(type: "ryokan").search(params[:search]).paginate(page: params[:page], per_page: @page)
+      @like = Like.new
   end
   
   def ryokan_page
@@ -33,8 +36,8 @@ class LodgesController < ApplicationController
     render("ryokan")
   end
   
-  
-
+  def destroy
+  end
    
 
    def index
@@ -49,5 +52,7 @@ class LodgesController < ApplicationController
   def new
     @lodge = Lodge.new
   end
+  
+  
   
 end

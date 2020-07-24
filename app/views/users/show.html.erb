@@ -1,18 +1,45 @@
-<% provide(:title, "like") %>
-
-<div class="like_page">
-    <h1>Profile</h1>
-    <% @user.each do |user| %>
-    <ul>
-        <li><%= user.name %></li>
-        <li><%= user.email %></li>
-    </ul>
-    <% end %>
-    <h1>Your favorite lodges</h1>
+<% provide(:title, "Like") %>
+<body class="favorite_page">
+<div class="lodge_page">
     
+    <p>ホテル名検索</p>
+　    <%= form_tag(user_path(current_user), :method => 'get' , class:'form4') do %>
+      <%= text_field_tag :search, '',class:'sbox4', placeholder:'ホテル名を入力　ex.HOTEL SHE' %>
+      <button class="sbtn4" type="submit"><i class="fas fa-search"></i></button>
+      <% end %>
 
-
-
-
+    <div class="buttons-coll">  
+        <button class="custom-btn btn-3"><span><%= link_to 'Favorite Lodges', user_path(current_user), class: 'top_name' %></span></button>
+    </div>
+    
+   
+   
+    　　<% @likes.each do |like| %>
+        
+        <p class="hotel_name"><%= link_to like.lodge.lodge, like.lodge.hp_link %></p>
+        
+        <div class="heart-icon">
+        
+            <div id="like-btn-<%= like.lodge.id %>">
+                <%= render 'likes/like', lodge: like.lodge %>
+            </div>
+        </div>
+        
+        <%= image_tag like.lodge.image.to_s %>　<%= image_tag like.lodge.image2.to_s %>　<%= image_tag like.lodge.image3.to_s %>
+        <ul class=hotel_info>
+              <li><%= like.lodge.postal_code %></li>
+              <li><%= like.lodge.prefecture %><%= like.lodge.address %><button class="icon_form"><i class="fas fa-map-marker-alt"></i><%= link_to "Google map", like.lodge.map, class: 'map_image' %></button></li>
+              <li><%= like.lodge.phone_number %></li>
+              <li><%= like.lodge.roomtype %></li>
+        </ul>
+        <% end %>
 </div>
+</body>
+    
+   
+
+
+
+
+
  

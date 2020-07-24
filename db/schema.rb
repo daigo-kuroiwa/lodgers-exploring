@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200708052353) do
+ActiveRecord::Schema.define(version: 20200721052240) do
 
   create_table "likes", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.integer  "lodge_id",   null: false
+    t.integer  "user_id"
+    t.integer  "lodge_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["lodge_id"], name: "index_likes_on_lodge_id"
