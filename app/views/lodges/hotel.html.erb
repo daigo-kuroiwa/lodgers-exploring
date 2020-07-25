@@ -40,7 +40,7 @@
 
 <section id="sample" class="fade_off">
 <% @lodges.each do |lodge| %>
-  <p class="hotel_name"><%= link_to lodge.lodge, lodge.hp_link %></p>
+  <p class="hotel_name"><%= link_to lodge.lodge, lodge.hp_link, class: "pre" %></p>
   
   <% if logged_in? %>
   <div class="heart-icon">

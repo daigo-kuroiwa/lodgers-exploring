@@ -428,7 +428,7 @@ nav{
   text-align: center;
 }
 .sign_up_main{
-  background-image: url("本箱.lobby.jpg");
+  background-image: image-url("\u672C\u7BB1.lobby.jpg");
   background-color: rgba(255,255,255,0.4);
   background-blend-mode: lighten;
   background-size: cover;
@@ -476,13 +476,13 @@ nav{
 /*hostelページ*/
 .hostel_logo{
 	 box-shadow: none;
-	 position: absolute; top: 2700px; left: 0px;
+	 position: absolute; top: 2800px; left: 0px;
 	 width: 720px;
    height: 380px;
 }
 
 .hostel_type{
-   position: absolute; top: 2700px; right: 0px;
+   position: absolute; top: 2800px; right: 0px;
 	 width: 720px;
    height: 380px;
    background-color: #B8860B;
@@ -913,7 +913,29 @@ input {
   letter-spacing: 0.07em;
   padding-right: 150px;
   margin-top: 40px;
+  display: flex;
+  align-items: center;
 }
+.hotel_name:before,
+.hotel_name:after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background-color: #978029;
+}
+
+.hotel_name:before {
+    margin-right: 1rem;
+    background: linear-gradient(-90deg, #978029, transparent);
+}
+
+.hotel_name:after {
+    margin-left: 1rem;
+    background: linear-gradient(90deg, #978029, transparent);
+}
+
+
+
 .image_list{
   display:inline-block;
 }
@@ -1030,3 +1052,6 @@ color:#FFFF99;
   padding-left: 1100px;
 }
 
+p.pre{
+  color:　red;
+}
