@@ -17,13 +17,23 @@
     　　<% @likes.each do |like| %>
         
         <p class="hotel_name"><%= link_to like.lodge.lodge, like.lodge.hp_link,:style=>"color:#008080;" %></p>
-        
-        <div class="heart-icon">
-        
-            <div id="like-btn-<%= like.lodge.id %>">
-                <%= render 'likes/like', lodge: like.lodge %>
+    <div class="icon_main">
+            <div class="icon1"><%= link_to "https://www.instagram.com/hotelsheosaka/?hl=ja" do %>
+              <span class="fab fa-instagram-square"></span>
+              <% end %>
             </div>
-        </div>
+            <div class="icon2"><%= link_to "https://fontawesome.com/icons/facebook-square?style=brands" do %>
+              <span class="fab fa-facebook-square"></span>
+              <% end %>
+            </div>
+            <div class="heart-icon">
+              <div id="like-btn-<%= like.lodge.id %>">
+               <%= render 'likes/like', lodge: like.lodge %>
+              </div>
+            </div>
+    </div>
+        
+        
         
         <%= image_tag like.lodge.image.to_s %>　<%= image_tag like.lodge.image2.to_s %>　<%= image_tag like.lodge.image3.to_s %>
         <ul class=hotel_info>

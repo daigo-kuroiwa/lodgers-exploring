@@ -336,7 +336,7 @@ nav{
 
 
 .hidden_box {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
     
 }
@@ -428,7 +428,7 @@ nav{
   text-align: center;
 }
 .sign_up_main{
-  background-image: url("honbako.lobby.jpg");
+  background-image: url("本箱.lobby.jpg");
   background-color: rgba(255,255,255,0.4);
   background-blend-mode: lighten;
   background-size: cover;
@@ -1048,10 +1048,29 @@ color:#FFFF99;
   color: #CCCCCC;
   margin-right: 5px;
 }
-.heart-icon{
-  padding-left: 1100px;
-}
 
-p.pre{
-  color:　red;
+.heart-icon{
+  padding-left: 1105px;
+  position: relative;
+}
+.icon_main{
+  margin-bottom: 5px;
+}
+.icon1{
+  padding-left: 1055px;
+}
+.fa-instagram-square{
+  position: absolute;
+  font-size: 20px;
+  color: #FF33CC;
+  z-index: 1;
+}
+.icon2{
+  padding-left: 1080px;
+}
+.fa-facebook-square{
+  position: absolute;
+  font-size: 20px;
+  color: blue;
+  z-index: 1;
 }

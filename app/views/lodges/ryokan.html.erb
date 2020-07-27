@@ -41,14 +41,24 @@
 
 <section id="sample" class="fade_off">
 <% @lodges.each do |lodge| %>
-  <p class="hotel_name"><%= link_to lodge.lodge, lodge.hp_link %></p>
+  <p class="hotel_name"><%= link_to lodge.lodge, lodge.hp_link,:style=>"color:#008080;" %></p>
   
 <% if logged_in? %>
-<div class="heart-icon">
-    <div id="like-btn-<%= lodge.id %>">
-     <%= render 'likes/like', lodge: lodge %>
+    <div class="icon_main">
+    <div class="icon1"><%= link_to lodge.instagram do %>
+      <span class="fab fa-instagram-square"></span>
+      <% end %>
     </div>
-</div>
+    <div class="icon2"><%= link_to lodge.facebook do %>
+      <span class="fab fa-facebook-square"></span>
+      <% end %>
+    </div>
+    <div class="heart-icon">
+      <div id="like-btn-<%= lodge.id %>">
+       <%= render 'likes/like', lodge: lodge %>
+      </div>
+    </div>
+  </div>
 <% end %>
 
   <%= image_tag lodge.image.to_s %>　<%= image_tag lodge.image2.to_s %>　<%= image_tag lodge.image3.to_s %>
