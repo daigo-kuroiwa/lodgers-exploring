@@ -491,13 +491,13 @@ nav{
 /*hostelページ*/
 .hostel_logo{
 	 box-shadow: none;
-	 position: absolute; top: 3250px; left: 0px;
+	 position: absolute; top: 3320px; left: 0px;
 	 width: 720px;
    height: 380px;
 }
 
 .hostel_type{
-   position: absolute; top: 3250px; right: 0px;
+   position: absolute; top: 3320px; right: 0px;
 	 width: 720px;
    height: 380px;
    background-color: #B8860B;
@@ -608,7 +608,7 @@ nav{
 }
 
 .New_listing{
-  margin-top: 1230px;
+  margin-top: 1300px;
 }
 .New_listing h1{
   font-size: 27px;
@@ -1152,6 +1152,16 @@ color:#FFFF99;
   width: auto;
   margin-bottom: 0px;
 }
+.fav-intro{
+  text-align: center;
+  padding-right: 150px;
+  font-weight: bold;
+  p{
+    font-size: 26px;
+    color: #978029;
+    font-family: 'IM Fell DW Pica SC', serif;
+  }
+}
 
 .icon-btn-liked {
   color: red;
@@ -1188,3 +1198,4 @@ color:#FFFF99;
   color: blue;
   z-index: 1;
 }
+
