@@ -1692,9 +1692,9 @@ Lodge.create!(lodge:  "CITAN",
              roomtype: "Roomtype: Mix dormitory, Female dormitory, Superior King, Superior Queen, Standard Queen, Deluxe Twin, Twin",
              instagram: "https://www.instagram.com/citan_tokyo/?hl=ja",
              facebook: "https://www.facebook.com/citan4",
-             image:File.open("./app/assets/images/.main.jpg"),
-             image2:File.open("./app/assets/images/.lobby.jpg"),
-             image3:File.open("./app/assets/images/.room.jpg")
+             image:File.open("./app/assets/images/CITAN.main.jpg"),
+             image2:File.open("./app/assets/images/CITAN.lobby.jpg"),
+             image3:File.open("./app/assets/images/CITAN.room.jpg")
              )
              
 Lodge.create!(lodge:  "東京ゲストハウスtoco.",
