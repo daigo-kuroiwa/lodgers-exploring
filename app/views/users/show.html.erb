@@ -2,14 +2,9 @@
 
 <div class="lodge_page">
     
-    <p>ホテル名検索</p>
-　    <%= form_tag(user_path(current_user), :method => 'get' , class:'form4') do %>
-      <%= text_field_tag :search, '',class:'sbox4', placeholder:'ホテル名を入力　ex.HOTEL SHE' %>
-      <button class="sbtn4" type="submit"><i class="fas fa-search"></i></button>
-      <% end %>
 
-    <div class="buttons-coll">  
-        <button class="custom-btn btn-3"><span><%= link_to 'Favorite Lodges', user_path(current_user), class: 'top_name' %></span></button>
+    <div class="buttons-coll-2">  
+        <button class="custom-btn btn-5"><span><%= link_to 'Favorites', user_path(current_user), class: 'top_name' %></span></button>
     </div>
     
    
