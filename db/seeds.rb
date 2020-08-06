@@ -2942,8 +2942,8 @@ Lodge.create!(lodge:  "WINERYSTAY TRAVIGNE",
              roomtype: "Roomtype: Premium room, Deluxe room, Club room, Drape room",
              instagram: "",
              facebook: "",
-             image:File.open("./app/assets/images/winery.main.jpg"),
-             image2:File.open("./app/assets/images/winery.lobby.jpg"),
+             image:File.open("./app/assets/images/winery.main.png"),
+             image2:File.open("./app/assets/images/winery.lobby.png"),
              image3:File.open("./app/assets/images/winery.room.jpg")
              )
              
@@ -2990,9 +2990,9 @@ Lodge.create!(lodge:  "O'popo Home",
              roomtype: "Roomtype: ",
              instagram: "https://www.instagram.com/opopohome/?hl=ja",
              facebook: "https://www.facebook.com/home.opopo.5",
-             image:File.open("./app/assets/images/.main.jpg"),
-             image2:File.open("./app/assets/images/.lobby.jpg"),
-             image3:File.open("./app/assets/images/.room.jpg")
+             image:File.open("./app/assets/images/opopo.main.jpg"),
+             image2:File.open("./app/assets/images/opopo.lobby.jpg"),
+             image3:File.open("./app/assets/images/opopo.room.jpg")
              )
              
 Lodge.create!(lodge:  "ゲストハウス ぐーぐー",
@@ -3313,22 +3313,6 @@ Lodge.create!(lodge:  "しまなみ海道WAKKA",
              image:File.open("./app/assets/images/WAKKA.main.jpg"),
              image2:File.open("./app/assets/images/WAKKA.lobby.jpg"),
              image3:File.open("./app/assets/images/WAKKA.room.jpg")
-             )
-             
-Lodge.create!(lodge:  "",
-             prefecture: "県",
-             postal_code: "〒",
-             address: "",
-             phone_number: "TEL ",
-             map: "",
-             type: "",
-             hp_link: "",
-             roomtype: "Roomtype: ",
-             instagram: "",
-             facebook: "",
-             image:File.open("./app/assets/images/.main.jpg"),
-             image2:File.open("./app/assets/images/.lobby.jpg"),
-             image3:File.open("./app/assets/images/.room.jpg")
              )
              
 Lodge.create!(lodge:  "しまなみゲストハウス「シクロの家」",
