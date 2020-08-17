@@ -12,3 +12,10 @@
 
 
 .byebug_history
+
+*.psd
+*.pdf
+*.jpg
+*.png
+/test
+/spec
