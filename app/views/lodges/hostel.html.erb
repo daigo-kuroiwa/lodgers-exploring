@@ -51,10 +51,12 @@
       <span class="fab fa-instagram-square"></span>
       <% end %>
     </div>
+    
     <div class="icon2"><%= link_to lodge.facebook do %>
       <span class="fab fa-facebook-square"></span>
       <% end %>
     </div>
+    
     <div class="heart-icon">
       <div id="like-btn-<%= lodge.id %>">
        <%= render 'likes/like', lodge: lodge %>

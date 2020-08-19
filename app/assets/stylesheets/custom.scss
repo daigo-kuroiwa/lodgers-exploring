@@ -66,11 +66,7 @@ p {
 
 
 /* header */
-body{
-  margin: 0;
-  padding: 0;
-  width: auto;
-}
+
 
 
 #logo {
@@ -98,35 +94,7 @@ nav{
 
 /* footer */
 
-.footer1 {
-  margin-top: 100px;
-  
-  
-  /*border-top: 1px solid $gray-medium-light;*/
-  color: $gray-light;
-  text-align: center;
-  
-  small{
-    font-size: 1.2rem;
-    letter-spacing: 0.1em;
-    text-align: center;
-  }
-}
 
-/*home画面*/
-.footer2{
-  margin-bottom: 100px;
-  padding-top: 5px;
-  /*border-top: 1px solid $gray-medium-light;*/
-  color: $gray-light;
-  text-align: center;
-  
-  small{
-    font-size: 1.2rem;
-    letter-spacing: 0.1em;
-    text-align: center;
-  }
-}
 
 
 
@@ -136,7 +104,7 @@ nav{
   position   : relative;
   overflow   : hidden;
                     /* 画像のサイズに合わせて変更する */
-  width      : 1440px;
+  width      : 100%;
   height     : 790px;
   background : #fff;
   opacity    : 1;
@@ -1181,7 +1149,8 @@ color:#FFFF99;
 }
 
 .heart-icon{
-  padding-left: 1105px;
+  text-align: left;
+  width: auto;
   position: relative;
 }
 .icon_main{
