@@ -1888,23 +1888,7 @@ Lodge.create!(lodge:  "古民家ゲストハウス虎所lit",
              image2:File.open("./app/assets/images/虎所.lobby.jpg"),
              image3:File.open("./app/assets/images/虎所.room.jpg")
              )
-             
-Lodge.create!(lodge:  "やど Seven Beach",
-             prefecture: "香川県",
-             postal_code: "〒761-3110",
-             address: "香川郡直島町宮ノ浦2310-19",
-             phone_number: "TEL 087-892-4567",
-             map: "https://goo.gl/maps/x7eoFW3ycwRjzWTi7",
-             type: "hostel",
-             hp_link: "http://yado-sevenbeach.com/index.php?lang=ja",
-             roomtype: "Roomtype: Japanese Modern",
-             instagram: "",
-             facebook: "https://www.facebook.com/YadoSevenBeach",
-             image:File.open("./app/assets/images/Seven.main.jpg"),
-             image2:File.open("./app/assets/images/Seven.lobby.jpg"),
-             image3:File.open("./app/assets/images/Seven.room.jpg")
-             )
-             
+
 Lodge.create!(lodge:  "MY LODGE Naoshima",
              prefecture: "香川県",
              postal_code: "〒761-3110",
@@ -3235,22 +3219,6 @@ Lodge.create!(lodge:  "城西館",
              image3:File.open("./app/assets/images/城西館.room.jpg")
              )
              
-Lodge.create!(lodge:  "はるのゲストハウス",
-             prefecture: "高知県",
-             postal_code: "〒781-0301",
-             address: "高知市春野町弘岡上845",
-             phone_number: "TEL 088-894-2536",
-             map: "https://goo.gl/maps/STA4G9ifAhu5YmqQ9",
-             type: "hostel",
-             hp_link: "http://www.henro-guesthouse.com/haruno/",
-             roomtype: "Roomtype: Mix dormitory, Economy Triple",
-             instagram: "",
-             facebook: "https://www.facebook.com/harunoguesthouse",
-             image:File.open("./app/assets/images/はるの.main.jpg"),
-             image2:File.open("./app/assets/images/はるの.lobby.jpg"),
-             image3:File.open("./app/assets/images/はるの.room.jpg")
-             )
-             
 Lodge.create!(lodge:  "オーベルジュ土佐山",
              prefecture: "高知県",
              postal_code: "〒781-3222",
@@ -3265,38 +3233,6 @@ Lodge.create!(lodge:  "オーベルジュ土佐山",
              image:File.open("./app/assets/images/土佐山.main.jpg"),
              image2:File.open("./app/assets/images/土佐山.lobby.jpg"),
              image3:File.open("./app/assets/images/土佐山.room.jpg")
-             )
-             
-Lodge.create!(lodge:  "ゲストハウス彩（イロドリ）鎌倉",
-             prefecture: "神奈川県",
-             postal_code: "〒248-0014",
-             address: "鎌倉市由比ガ浜２丁目４−２３",
-             phone_number: "TEL 0467-37-9471",
-             map: "https://g.page/irodorikamakura?share",
-             type: "hostel",
-             hp_link: "https://i-link-u.com/",
-             roomtype: "Roomtype: Economy Triple, Economy Double",
-             instagram: "",
-             facebook: "https://www.facebook.com/iiilinku",
-             image:File.open("./app/assets/images/彩.main.jpg"),
-             image2:File.open("./app/assets/images/彩.lobby.jpg"),
-             image3:File.open("./app/assets/images/彩.room.jpg")
-             )
-             
-Lodge.create!(lodge:  "Hostel YUIGAHAMA + SOBA BAR",
-             prefecture: "神奈川県",
-             postal_code: "〒248-0014",
-             address: "鎌倉市由比ガ浜2-5-16",
-             phone_number: "TEL 0467-81-4242",
-             map: "https://g.page/HostelYuigahama?share",
-             type: "hostel",
-             hp_link: "https://hostelyuigahama.com/",
-             roomtype: "Roomtype: Mix dormitory, Double, Twin",
-             instagram: "https://www.instagram.com/hostelyuigahama/?hl=ja",
-             facebook: "https://www.facebook.com/HostelYuigahama",
-             image:File.open("./app/assets/images/YUIGAHAMA.main.jpg"),
-             image2:File.open("./app/assets/images/YUIGAHAMA.lobby.jpg"),
-             image3:File.open("./app/assets/images/YUIGAHAMA.room.jpg")
              )
              
 Lodge.create!(lodge:  "しまなみ海道WAKKA",
