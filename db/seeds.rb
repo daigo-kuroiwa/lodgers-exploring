@@ -3427,22 +3427,6 @@ Lodge.create!(lodge:  "民宿innしらはま海の宿",
              image3:File.open("./app/assets/images/民宿inn.room.jpg")
              )
              
-Lodge.create!(lodge:  "ゲストハウス　白浜 R-cafe　(女性専用）",
-             prefecture: "和歌山県",
-             postal_code: "〒649-2211",
-             address: "西牟婁郡白浜町1090-15",
-             phone_number: "TEL 080-6126-8642",
-             map: "https://goo.gl/maps/aZwXeg49My6qctKC6",
-             type: "hostel",
-             hp_link: "https://r-cafe.jimdofree.com/",
-             roomtype: "Roomtype: Female Standard room",
-             instagram: "",
-             facebook: "https://www.facebook.com/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%8F%E3%82%A6%E3%82%B9%E7%99%BD%E6%B5%9CRcafe-768862253182110",
-             image:File.open("./app/assets/images/Rcafe.main.jpg"),
-             image2:File.open("./app/assets/images/Rcafe.lobby.jpg"),
-             image3:File.open("./app/assets/images/Rcafe.room.jpg")
-             )
-             
 Lodge.create!(lodge:  "THE BLOSSOM HIBIYA",
              prefecture: "東京都",
              postal_code: "〒105-0004",

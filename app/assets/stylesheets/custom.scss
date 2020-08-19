@@ -7,6 +7,8 @@
 
 $gray-medium-light: #eaeaea;
 
+
+
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
@@ -765,6 +767,11 @@ input {
   color: #353535;
   font-family: "Cormorant Garamond", serif;
   margin-right: 10px;
+}
+@media (max-width: 900px){
+  .top_name{
+    padding-left: 100px;
+  }
   
 }
 .top_name:hover{
