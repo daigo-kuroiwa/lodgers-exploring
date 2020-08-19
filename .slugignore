@@ -1,4 +1,6 @@
 /.bundle
+/vendor
+
 
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -12,6 +14,8 @@
 
 .byebug_history
 
+.jpg
+.png
 *.psd
 *.pdf
 /test
