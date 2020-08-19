@@ -14,8 +14,7 @@
 
 .byebug_history
 
-*.jpg
-*.png
+
 *.psd
 *.pdf
 /test
