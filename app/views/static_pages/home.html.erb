@@ -1,168 +1,179 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
+
 <body>
- <div class="slide" id="makeImg">
-  <%= image_tag "U2.main.jpg" %>
-  <%= image_tag "LANDABOUT.room.jpg" %>
-  <%= image_tag "アマネム.main.jpg" %>
-  <%= image_tag "とりい.room.jpg" %>
-  <%= image_tag "里山.lobby.jpg" %>
- </div>
+    <!--トップページのスライド画面-->
+     <div class="slide" id="makeImg">
+          <%= image_tag "U2.main.jpg" %>
+          <%= image_tag "LANDABOUT.room.jpg" %>
+          <%= image_tag "アマネム.main.jpg" %>
+          <%= image_tag "とりい.room.jpg" %>
+          <%= image_tag "里山.lobby.jpg" %>
+     </div>
  
- <div class="scrollBar">
-     SCROLL
- </div>
+     <div class="scrollBar">
+             SCROLL
+     </div>
  
 
 
 <header class="header2">
-    
-<section id="sample" class="fade_off">
-<div class="Concept">
-    <h1>Concept</h1>
-    <div class="word">
-        <h2>〜旅行者〜</h2>
-        <p>”どこに旅行するかは決まったけど、宿泊先はどこにしよう、、？まあ予約サイトから地名で検索して、良さげなところにしよう。”</p>
-        <p>”有名で評価の高いホテルか旅館が無難だよね。良さげな宿泊施設をお気に入りして一覧で見れる、宿泊施設専用アプリがあると便利だよね！”</p>
-        <h2>〜宿泊施設〜</h2>
-        <p>”予約サイト経由の予約ばかり、、手数料が取られて売上が伸びないなあ。知名度を上げて、公式HPを見て直接予約してくれるゲストを増やしたい！”</p>
-        <p>”ホステルでもカップル・グループ向けの部屋があることをもっと広めたいなあ。”</p>
-    </div>
-    <div class="intro">
-        <p>そんな両者の需要を満たすことができたら、、を実現した、ある種ユーザーと宿泊施設のマッチング要素を含んだWebアプリです。</p>
-        <p>テーマは<span class="theme">"Lodge=宿"</span>。ホテルだけではない多様な<span class="theme">"Lodge"</span>を、実際の予約からチェックアウトまでの形式で紹介していきます。</p>
-        <p>SNSの普及により、多くのLodgeがInstagramやTwitterを駆使して内部の画像やイベント情報を発信したりと、Lodgeが身近になってきたこの頃。</p>
-        <p>しかし、依然として旅行者は予約サイト経由で検索~予約までを一貫して行い、Lodge選びを楽しんでいないのではないだろうか。</p>
-        <p>そこでこのWebアプリを通じてその楽しさを知り、行きたいLodgeがあるから旅行先を決める、といった旅行の選び方が多様化することを望んでいます。</p>
-    </div>
-    <div class="intro2">
-        <p>ー掲載基準は製作者の選択が大半となりますが、Booking.comのクチコミが8.2以上*<span class="caution">製作時点</span> を大まかな基準としています(一部例外あり)ー</p>
-        <p>ーターゲットを旅行者においているため、ビジネスホテル・外資系高級ホテルは掲載していません(一部例外あり)ー</p>
-    </div>
-</div>
-</section>
-
-<section id="sample2" class="fade_off">
-<div class="sign_up">
-    <h1>Sign up</h1>    
-    <div class="word2">
-        <h2>宿泊前にすることとして、予約は必須。</h2>
-        <h2>予約をしていただいたゲスト様のみ、以下の3つの機能をお使いいただけます。</h2>
-        
-            <p>１.検索機能</p>
-            <p class="detail">ー施設名、または都道府県名で各Lodgeカテゴリー別に検索ができ、気になる施設をお探しいただけますー</p>
-             <%= image_tag "search.gif", size: '360x240' %>
-            <p class="detail2">※都道府県名だけでなく、"箱根" といったようにエリア別の検索も可能です</p>
-       
-            <p>２.お気に入り機能</p>
-            <p class="detail">ー今後行きたいと思う施設をお気に入りすることができ、いつでも一覧として見ることができますー</p>
-            <%= image_tag "fav.gif", size: '560x420' %>
-          
-            <p>３.SNSアカウント直結機能</p>
-            <p class="detail">ーInstagram, Facebookアカウントへワンクリックでとび、現場の雰囲気を感じていただけますー</p>
-             <%= image_tag "SNS.gif", size: '480x360' %>
-            <p class="detail2">※全施設がアカウントを所持しているわけではありません</p>
+ 
+<!--ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーConceptページーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー   -->
+    <section id="sample" class="fade_off">
+        <div class="Concept">
+            <h1>Concept</h1>
             
-          
-            <% if logged_in? %>
-            <h2 class="login_causion">※お客様は既にご予約済みとなっております。</h2>
-            <% else %>
-            <h2 class="form_detail">ご予約はこちらの<%= link_to "Booking Form", signup_path, class: 'book_form' %>からしていただきますようお願い致します。</h2>
-            <h2>2回目のご利用のお客様はこちらの<%= link_to "Login Form", login_path, class: 'book_form' %>から再度ご利用いただきますようお願い致します。</h2>
-            <h2>ご利用、心よりお待ちしております。</h2>
-            <% end %>
+            <div class="word">
+                <h2>〜旅行者〜</h2>
+                <p>”どこに旅行するかは決まったけど、宿泊先はどこにしよう、、？まあ予約サイトから地名で検索して、良さげなところにしよう。”</p>
+                <p>”有名で評価の高いホテルか旅館が無難だよね。良さげな宿泊施設をお気に入りして一覧で見れる、宿泊施設専用アプリがあると便利だよね！”</p>
+                <h2>〜宿泊施設〜</h2>
+                <p>”予約サイト経由の予約ばかり、、手数料が取られて売上が伸びないなあ。知名度を上げて、公式HPを見て直接予約してくれるゲストを増やしたい！”</p>
+                <p>”ホステルでもカップル・グループ向けの部屋があることをもっと広めたいなあ。”</p>
+            </div>
         
-    </div>
-   
-    <div class="intro3">
-        <p>それでは、コンセプトを理解しご予約いただいたお客様からエントランスへ、、🚪</p>
-    </div>
-</div>
-</section>
-
-<div class="hidden_box">
-    <label for="label1"><i class="fas fa-route"></i>Entrance</label>
-    <input type="checkbox" id="label1"/>
-    <div class="hidden_show">
-        <h1 class="title">~Choose from 3 types of <span class="blink">Lodges</span> below~</h1>
-
-        <div class="reset hotel_type-list", style= "margin-top: 60px;" >
-
-    
-        <%= image_tag("Tap.room.jpg", alt: "hostel image", class: "hostel_logo")%>
-
-            <div class="hostel_type">
-                <h2>01. Hostel・Guesthouse</h2>
-                <p class="hostel_explain">ホステル、ゲストハウスといえば、「安く泊まれるドミトリーがあって、外国人のバックパッカーが泊まりに行く場所」というイメージではないでしょうか？
-                そのイメージはあながち間違ってはいないのですが、近年は若者やグループ向けに、ドミトリーだけでなく個室を多く併設しているホステルが増えています。
-                共同ロビーにてオーナーの温かさや情報交換、また、地域に根ざして運営していることからその土地の生活や魅力を身近に感じることができる点が何よりの魅力です。
-                多くの施設は共同風呂・トイレとなり、アメニティはタオルが有料や寝間着がないなど、宿泊費が安価な分その他で料金が発生することを理解した上で宿泊することを推奨しています。</p>
-                <div class="checkin">
-                    <label for="label2"><i class="fas fa-bed"></i><%= link_to "Check in", lodges_hostel_path, class: "click" %></label>
-                    <input type="checkbox" id="label2"/>
-                </div>
+            <div class="intro">
+                <p>そんな両者の需要を満たすことができたら、、を実現した、ある種ユーザーと宿泊施設のマッチング要素を含んだWebアプリです。</p>
+                <p>テーマは<span class="theme">"Lodge=宿"</span>。ホテルだけではない多様な<span class="theme">"Lodge"</span>を、実際の予約からチェックアウトまでの形式で紹介していきます。</p>
+                <p>SNSの普及により、多くのLodgeがInstagramやTwitterを駆使して内部の画像やイベント情報を発信したりと、Lodgeが身近になってきたこの頃。</p>
+                <p>しかし、依然として旅行者は予約サイト経由で検索~予約までを一貫して行い、Lodge選びを楽しんでいないのではないだろうか。</p>
+                <p>そこでこのWebアプリを通じてその楽しさを知り、行きたいLodgeがあるから旅行先を決める、といった旅行の選び方が多様化することを望んでいます。</p>
+            </div>
             
-                
-        <%= image_tag("SHE_KYOTO.room.jpg", alt: "hotel image", class: "hotel_logo")%>
-        
-            <div class="hotel_type">
-                <h2>02. Hotel</h2>
-                <p class="hotel_explain">ゲストがホテルに求める物・事って一体なんだろう。ホテル運営は常々需要を考えて、ゲストに最大限の非日常を供給できるよう努力しています。
-                ホテルにも様々な種別がありますが、"本", "倉庫", "写真映え" "1日1組限定" といったコンセプトをもったコンセプトホテルが近年は増えてきているのが特徴です。
-                部屋にはユニットバス付き、朝食はビュッフェ式といったステレオタイプなホテルはいまだ人気を誇り、グループや家族で泊まるのに適したホテルも多く紹介しています。
-                内装で選ぶ。立地のよさで選ぶ。自分の雰囲気に合いそうだから選ぶ。多種多様なホテルを、多種多様な選び方で楽しんでください。</p>
-                 <div class="checkin">
-                    <label for="label2"><i class="fas fa-hotel"></i><%= link_to "Check in", lodges_hotel_path, class: "click" %></label>
-                    <input type="checkbox" id="label2"/>
-                 </div>
-                
-            </div>
-    
-        <%= image_tag("まほろば.room.png", alt: "ryokan image", class: "ryokan_logo")%>
-        
-            <div class="ryokan_type">
-                <h2>03. Ryokan・Camp</h2>
-                <p class="ryokan_explain">古風な建物・土地の歴史、天然温泉、グループで一棟貸し切りのキャンプなど、特���な目的をもった宿泊体験をここでは紹介しています。
-                ホステルやゲストハウス、ホテルとはまた違った旅館とはどんな特徴があると思いますか？それぞれ異なる部分もありますが、天然温泉があることや、食事は地のものを使っている、
-                女将がその土地の風情を語ってくれるなど、よりローカルな雰囲気を味わい癒されて帰路に着くことが多いのではないかと思います。またキャンプといえば、外の開放的なスペーズで
-                自然を感じ、普段寝ることのないテントという空間で夜を過ごすことができる。どんな非日常を味わうことができるのかをテーマに、HPから隅々まで施設を研究してみてください。</p>
-                 <div class="checkin">
-                    <label for="label2"><i class="fas fa-campground"></i><%= link_to "Check in", lodges_ryokan_path, class: "click" %></label>
-                    <input type="checkbox" id="label2"/>
-                 </div>
-                
-            </div>
+            <div class="intro2">
+                <p>ー掲載基準は製作者の選択が大半となりますが、Booking.comのクチコミが8.2以上*<span class="caution">製作時点</span> を大まかな基準としています(一部例外あり)ー</p>
+                <p>ーターゲットを旅行者においているため、ビジネスホテル・外資系高級ホテルは掲載していません(一部例外あり)ー</p>
             </div>
         </div>
-        
-<section id="sample3" class="fade_off">     
-            <div class="New_listing">
-                <h1>New Listing<h1>
-                    <p class="detail">~8/17最終更新~</p>
-                  　<% @lodges.each do |lodge| %>
-                          <p class="hotel_name-2"><%= link_to lodge.lodge, lodge.hp_link,:style=>"color:#008080;" %></p>
-                          <%= image_tag lodge.image.to_s %>　<%= image_tag lodge.image2.to_s %>　<%= image_tag lodge.image3.to_s %>
-                    <% end %>
-            </div>
-</section>
-       
-<section id="sample4" class="fade_off">     
-            <div class="Impression">
-                <h1>Impression<h1>
-                  　<p>当Webサイトをご使用いただきありがとうございました。</p>
-                  　<p>今後の運用に向けて、"こんな機能があると嬉しい", "ここの機能がよかった" 等のご意見をいただけると幸いです。</p>
-                  　　<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSds8m1wkIrHtws0m3Ylm3UQ2LPY_MHMDs9A-ry5dIxSAMLF4A/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-                 <h1 class="contact">Contact<h1>　
-                  　<p>お仕事等に関するお問い合わせは以下へお願い致します。</p>
-                  　<div class="mail"><%= mail_to 'info@lodgers.com', 'info@lodgers.com', :style=>"color:#008080;" %></div>
-                  　
-                  
-                  　
-            </div>
-</section>
+    </section>
 
+<!--ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーSign upページーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー   -->
+    <section id="sample2" class="fade_off">
+        <div class="sign_up">
+            <h1>Sign up</h1>
+            
+            <div class="word2">
+                <h2>宿泊前にすることとして、予約は必須。</h2>
+                <h2>予約をしていただいたゲスト様のみ、以下の3つの機能をお使いいただけます。</h2>
+        
+                <p>１.検索機能</p>
+                    <p class="detail">ー施設名、または都道府県名で各Lodgeカテゴリー別に検索ができ、気になる施設をお探しいただけますー</p>
+                     <%= image_tag "search.gif", size: '360x240' %>
+                    <p class="detail2">※都道府県名だけでなく、"箱根" といったようにエリア別の検索も可能です</p>
+       
+                <p>２.お気に入り機能</p>
+                    <p class="detail">ー今後行きたいと思う施設をお気に入りすることができ、いつでも一覧として見ることができますー</p>
+                    <%= image_tag "fav.gif", size: '560x420' %>
+          
+                <p>３.SNSアカウント直結機能</p>
+                    <p class="detail">ーInstagram, Facebookアカウントへワンクリックでとび、現場の雰囲気を感じていただけますー</p>
+                     <%= image_tag "SNS.gif", size: '480x360' %>
+                    <p class="detail2">※全施設がアカウントを所持しているわけではありません</p>
+
+
+                    <!--Sign up済みの場合の表示ページ-->
+                    <% if logged_in? %>
+                        <h2 class="login_causion">※お客様は既にご予約済みとなっております。</h2>
+                    <% else %>
+                        <h2 class="form_detail">ご予約はこちらの<%= link_to "Booking Form", signup_path, class: 'book_form' %>からしていただきますようお願い致します。</h2>
+                        <h2>2回目のご利用のお客様はこちらの<%= link_to "Login Form", login_path, class: 'book_form' %>から再度ご利用いただきますようお願い致します。</h2>
+                        <h2>ご利用、心よりお待ちしております。</h2>
+                    <% end %>
+        
+            </div>
+   
+            <div class="intro3">
+                <p>それでは、コンセプトを理解しご予約いただいたお客様からエントランスへ、、🚪</p>
+            </div>
+        </div>
+    </section>
+
+<!--ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーLodge一覧ページーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー   -->
+    <div class="hidden_box">
+            <label for="label1"><i class="fas fa-route"></i>Entrance</label>
+            <input type="checkbox" id="label1"/>
+            <!--↑のEntranceボタンをクリック→↓のhidden_showが発動される-->
+        <div class="hidden_show">
+                <h1 class="title">~Choose from 3 types of <span class="blink">Lodges</span> below~</h1>
+
+            <!--ホステル・ゲストハウスページ-->
+                <%= image_tag("Tap.room.jpg", alt: "hostel image", class: "hostel_logo")%>
+
+                    <div class="hostel_type">
+                            <h2>01. Hostel・Guesthouse</h2>
+                            <p class="hostel_explain">ホステル、ゲストハウスといえば、「安く泊まれるドミトリーがあって、外国人のバックパッカーが泊まりに行く場所」というイメージではないでしょうか？
+                            そのイメージはあながち間違ってはいないのですが、近年は若者やグループ向けに、ドミトリーだけでなく個室を多く併設しているホステルが増えています。
+                            共同ロビーにてオーナーの温かさや情報交換、また、地域に根ざして運営していることからその土地の生活や魅力を身近に感じることができる点が何よりの魅力です。
+                            多くの施設は共同風呂・トイレとなり、アメニティはタオルが有料や寝間着がないなど、宿泊費が安価な分その他で料金が発生することを理解した上で宿泊することを推奨しています。</p>
+                        <div class="checkin">
+                            <label for="label2"><i class="fas fa-bed"></i><%= link_to "Check in", lodges_hostel_path, class: "click" %></label>
+                            <input type="checkbox" id="label2"/>
+                        </div>
+                        
+            <!--ホテルページ-->
+                <%= image_tag("SHE_KYOTO.room.jpg", alt: "hotel image", class: "hotel_logo")%>
+        
+                    <div class="hotel_type">
+                            <h2>02. Hotel</h2>
+                            <p class="hotel_explain">ゲストがホテルに求める物・事って一体なんだろう。ホテル運営は常々需要を考えて、ゲストに最大限の非日常を供給できるよう努力しています。
+                            ホテルにも様々な種別がありますが、"本", "倉庫", "写真映え" "1日1組限定" といったコンセプトをもったコンセプトホテルが近年は増えてきているのが特徴です。
+                            部屋にはユニットバス付き、朝食はビュッフェ式といったステレオタイプなホテルはいまだ人気を誇り、グループや家族で泊まるのに適したホテルも多く紹介しています。
+                            内装で選ぶ。立地のよさで選ぶ。自分の雰囲気に合いそうだから選ぶ。多種多様なホテルを、多種多様な選び方で楽しんでください。</p>
+                         <div class="checkin">
+                            <label for="label2"><i class="fas fa-hotel"></i><%= link_to "Check in", lodges_hotel_path, class: "click" %></label>
+                            <input type="checkbox" id="label2"/>
+                         </div>
+                
+                    </div>
+    
+            <!--旅館・キャンプページ-->
+                <%= image_tag("まほろば.room.png", alt: "ryokan image", class: "ryokan_logo")%>
+        
+                    <div class="ryokan_type">
+                            <h2>03. Ryokan・Camp</h2>
+                            <p class="ryokan_explain">古風な建物・土地の歴史、天然温泉、グループで一棟貸し切りのキャンプなど、特���な目的をもった宿泊体験をここでは紹介しています。
+                            ホステルやゲストハウス、ホテルとはまた違った旅館とはどんな特徴があると思いますか？それぞれ異なる部分もありますが、天然温泉があることや、食事は地のものを使っている、
+                            女将がその土地の風情を語ってくれるなど、よりローカルな雰囲気を味わい癒されて帰路に着くことが多いのではないかと思います。またキャンプといえば、外の開放的なスペーズで
+                            自然を感じ、普段寝ることのないテントという空間で夜を過ごすことができる。どんな非日常を味わうことができるのかをテーマに、HPから隅々まで施設を研究してみてください。</p>
+                         <div class="checkin">
+                            <label for="label2"><i class="fas fa-campground"></i><%= link_to "Check in", lodges_ryokan_path, class: "click" %></label>
+                            <input type="checkbox" id="label2"/>
+                         </div>
+                
+                    </div>
+                    </div>
+        
+ <!--ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーNew Listingページーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー   -->       
+    <section id="sample3" class="fade_off">     
+                    <div class="New_listing">
+                        <h1>New Listing<h1>
+                        <p class="detail">~8/17最終更新~</p>
+                        
+                  　        <% @lodges.each do |lodge| %>
+                              <p class="hotel_name-2"><%= link_to lodge.lodge, lodge.hp_link,:style=>"color:#008080;" %></p>
+                              <%= image_tag lodge.image.to_s %>　<%= image_tag lodge.image2.to_s %>　<%= image_tag lodge.image3.to_s %>
+                            <% end %>
+                    </div>
+    </section>
+
+<!--ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーImpression・Contactページーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー   -->       
+    <section id="sample4" class="fade_off">     
+                    <div class="Impression">
+                        <h1>Impression<h1>
+                      　<p>当Webサイトをご使用いただきありがとうございました。</p>
+                      　<p>今後の運用に向けて、"こんな機能があると嬉しい", "ここの機能がよかった" 等のご意見をいただけると幸いです。</p>
+                  　　  
+                  　　    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSds8m1wkIrHtws0m3Ylm3UQ2LPY_MHMDs9A-ry5dIxSAMLF4A/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+                     
+                         <h1 class="contact">Contact<h1>　
+                  　        <p>お仕事等に関するお問い合わせは以下へお願い致します。</p>
+                  　        <div class="mail"><%= mail_to 'info@lodgers.com', 'info@lodgers.com', :style=>"color:#008080;" %></div>
+                    </div>
+    </section>
+
+        </div>
     </div>
-</div>
 </header>
 </body>
   

@@ -67,8 +67,6 @@ p {
 
 /* header */
 
-
-
 #logo {
   font-family: 'Courgette', cursive;
   float: left;
@@ -89,14 +87,6 @@ nav{
   font-size: 20px;
   margin-right: 12px;
 }
-
-
-
-/* footer */
-
-
-
-
 
 /*home*/
 
@@ -314,16 +304,12 @@ nav{
 }
 
 
-
 .hidden_box {
     margin-top: 20px;
     text-align: center;
-    
 }
-
 /*ボタン装飾*/
 .hidden_box label {
-  
     padding: 15px 50px 15px 50px;
     font-weight: bold;
     cursor : pointer;
@@ -332,7 +318,6 @@ nav{
     box-shadow: 4px 4px #555;
     border-radius: 10px;
     text-shadow: -1px -1px #555;
-    
 }
 
 /*ボタンホバー時*/
@@ -601,6 +586,10 @@ nav{
 }
 .contact{
   margin-top: 100px;
+}
+iframe{
+  margin-right: 100px;
+  text-align: center;
 }
 .mail{
   margin-top: 10px;
